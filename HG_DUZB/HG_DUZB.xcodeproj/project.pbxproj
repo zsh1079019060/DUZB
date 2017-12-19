@@ -33,55 +33,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FAC5F4841FE941340042A145 /* Classes */ = {
+		FA7F980A1FE946080055B157 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FAC5F48A1FE941340042A145 /* Main */,
-				FAC5F4851FE941340042A145 /* Home */,
-				FAC5F4891FE941340042A145 /* Live */,
-				FAC5F4871FE941340042A145 /* Follow */,
-				FAC5F4881FE941340042A145 /* Profile */,
-				FAC5F4861FE941340042A145 /* Tools */,
+				FA7F980B1FE946080055B157 /* Home */,
+				FA7F980C1FE946080055B157 /* Tools */,
+				FA7F980D1FE946080055B157 /* Follow */,
+				FA7F980E1FE946080055B157 /* Profile */,
+				FA7F980F1FE946080055B157 /* Live */,
+				FA7F98101FE946080055B157 /* Main */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		FAC5F4851FE941340042A145 /* Home */ = {
+		FA7F980B1FE946080055B157 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		FAC5F4861FE941340042A145 /* Tools */ = {
+		FA7F980C1FE946080055B157 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		FAC5F4871FE941340042A145 /* Follow */ = {
+		FA7F980D1FE946080055B157 /* Follow */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Follow;
 			sourceTree = "<group>";
 		};
-		FAC5F4881FE941340042A145 /* Profile */ = {
+		FA7F980E1FE946080055B157 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		FAC5F4891FE941340042A145 /* Live */ = {
+		FA7F980F1FE946080055B157 /* Live */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Live;
 			sourceTree = "<group>";
 		};
-		FAC5F48A1FE941340042A145 /* Main */ = {
+		FA7F98101FE946080055B157 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -107,7 +107,7 @@
 		FAFD95801FE1521D00F0BBD9 /* HG_DUZB */ = {
 			isa = PBXGroup;
 			children = (
-				FAC5F4841FE941340042A145 /* Classes */,
+				FA7F980A1FE946080055B157 /* Classes */,
 				FAFD95811FE1521D00F0BBD9 /* AppDelegate.swift */,
 				FAFD95851FE1521D00F0BBD9 /* Main.storyboard */,
 				FAFD95881FE1521D00F0BBD9 /* Assets.xcassets */,
