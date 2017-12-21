@@ -14,6 +14,8 @@
 		FA7B356A1FEB3B5C007A946F /* HGFollowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B35691FEB3B5C007A946F /* HGFollowController.swift */; };
 		FA7B356C1FEB3BF5007A946F /* HGProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B356B1FEB3BF5007A946F /* HGProfileController.swift */; };
 		FA7B356F1FEB43B8007A946F /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B356E1FEB43B8007A946F /* UIBarButtonItem+Extension.swift */; };
+		FA7B35711FEB49B0007A946F /* HGPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B35701FEB49B0007A946F /* HGPageTitleView.swift */; };
+		FA7B35731FEB4B98007A946F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B35721FEB4B98007A946F /* Common.swift */; };
 		FAFD95821FE1521D00F0BBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD95811FE1521D00F0BBD9 /* AppDelegate.swift */; };
 		FAFD95891FE1521D00F0BBD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFD95881FE1521D00F0BBD9 /* Assets.xcassets */; };
 		FAFD958C1FE1521D00F0BBD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFD958A1FE1521D00F0BBD9 /* LaunchScreen.storyboard */; };
@@ -27,6 +29,8 @@
 		FA7B35691FEB3B5C007A946F /* HGFollowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGFollowController.swift; sourceTree = "<group>"; };
 		FA7B356B1FEB3BF5007A946F /* HGProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGProfileController.swift; sourceTree = "<group>"; };
 		FA7B356E1FEB43B8007A946F /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		FA7B35701FEB49B0007A946F /* HGPageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGPageTitleView.swift; sourceTree = "<group>"; };
+		FA7B35721FEB4B98007A946F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		FAFD957E1FE1521D00F0BBD9 /* HG_DUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HG_DUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFD95811FE1521D00F0BBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFD95881FE1521D00F0BBD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +52,7 @@
 		FA7B354B1FEB3A90007A946F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA7B35701FEB49B0007A946F /* HGPageTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				FA7B356D1FEB435A007A946F /* Extension */,
+				FA7B35721FEB4B98007A946F /* Common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -336,12 +342,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA7B356F1FEB43B8007A946F /* UIBarButtonItem+Extension.swift in Sources */,
+				FA7B35711FEB49B0007A946F /* HGPageTitleView.swift in Sources */,
 				FA7B356A1FEB3B5C007A946F /* HGFollowController.swift in Sources */,
 				FA7B356C1FEB3BF5007A946F /* HGProfileController.swift in Sources */,
 				FA7B35501FEB3A91007A946F /* HGNavigationController.swift in Sources */,
 				FA7B35561FEB3B23007A946F /* HGHomeController.swift in Sources */,
 				FA7B35511FEB3A91007A946F /* HGTabBarController.swift in Sources */,
 				FA7B355B1FEB3B35007A946F /* HGLiveController.swift in Sources */,
+				FA7B35731FEB4B98007A946F /* Common.swift in Sources */,
 				FAFD95821FE1521D00F0BBD9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
