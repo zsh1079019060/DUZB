@@ -11,17 +11,17 @@ private let kTitleViewH:CGFloat = 40
 
 class HGHomeController: UIViewController {
     /// MARK: - 懒加载属性
-    private lazy var pageTitleView:HGPageTitleView = {
+    private lazy var pageTitleView:HGPageTitleView = { [weak self] in
         let titleFrame = CGRect.init(x: 0, y: kStatusBarH+kNavigationBarH, width: SCREEN_WIDTH, height: kTitleViewH)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let titleView = HGPageTitleView(frame: titleFrame, titles: titles)
-        
+        titleView.delegate = self
         return titleView
     }()
     
     
     
-    private lazy var pageContentView:HGPageContentView = {
+    private lazy var pageContentView:HGPageContentView = { [weak self] in
         /// 1. 确定内容的frame
         let contentH = kStatusBarH + kNavigationBarH + kTitleViewH
         let contentFrame = CGRect(x: 0, y: contentH, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - contentH)
@@ -80,5 +80,15 @@ extension HGHomeController{
         
         navigationItem.rightBarButtonItems = [historyItem,searchItem,qrcodeItem]
     }
+    
+}
+
+// MARK: - 实现 代理 HGPageTitleViewDelegate
+extension HGHomeController : HGPageTitleViewDelegate{
+    
+    func pageTtileView(titleView: HGPageTitleView, selectedIndex index: Int) {
+        pageContentView.setCurrentIndex(currentIndex: index)
+    }
+    
     
 }

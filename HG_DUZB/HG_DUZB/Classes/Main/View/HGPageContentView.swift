@@ -12,15 +12,17 @@ private let  contentCellId = "contentCellId"
 
 class HGPageContentView: UIView {
     
-    ///MARK: - 定义属性
+    /// MARK: - 定义属性
     fileprivate var childVcs:[UIViewController]
-    fileprivate var parentViewController:UIViewController
+    /// 容易形成循环引用 weak 修饰 ？类型
+    fileprivate weak var parentViewController:UIViewController?
     
     /// 懒加载
-    lazy var collectionView:UICollectionView = {
+    lazy var collectionView:UICollectionView = { [weak self] in
         /// 设置 collectionView，必须先设置 layout
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = self.bounds.size
+        /// 闭包里面不能用self
+        layout.itemSize = (self?.bounds.size)!
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
@@ -36,7 +38,7 @@ class HGPageContentView: UIView {
     }()
     
     /// 构造函数
-    init(frame: CGRect,childVcs:[UIViewController],parentViewController:UIViewController) {
+    init(frame: CGRect,childVcs:[UIViewController],parentViewController:UIViewController?) {
         
         self.childVcs = childVcs
         self.parentViewController = parentViewController
@@ -59,7 +61,7 @@ extension HGPageContentView{
     func setupUI(){
         /// 1.先把所有的自控制添加进来
         for childVc in childVcs {
-            parentViewController.addChildViewController(childVc)
+            parentViewController?.addChildViewController(childVc)
         }
         // 2.用collectionView，用于cell中存放控制器view
         addSubview(collectionView)
@@ -86,5 +88,16 @@ extension HGPageContentView:UICollectionViewDataSource{
         childVc.view.frame = cell.contentView.bounds
         cell.contentView.addSubview(childVc.view)
         return cell
+    }
+}
+
+// MARK: - 实现点击titleLabel 控制器进行滚动 到 对应的界面 
+extension HGPageContentView {
+    func setCurrentIndex(currentIndex:Int) {
+        
+        let offsetX = CGFloat(currentIndex) * collectionView.frame.width
+        
+        collectionView.setContentOffset(CGPoint.init(x: offsetX, y: 0), animated: false)
+        
     }
 }
