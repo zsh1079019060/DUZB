@@ -10,13 +10,32 @@ import UIKit
 private let kTitleViewH:CGFloat = 40
 
 class HGHomeController: UIViewController {
-    
+    /// MARK: - 懒加载属性
     private lazy var pageTitleView:HGPageTitleView = {
         let titleFrame = CGRect.init(x: 0, y: kStatusBarH+kNavigationBarH, width: SCREEN_WIDTH, height: kTitleViewH)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let titleView = HGPageTitleView(frame: titleFrame, titles: titles)
         
         return titleView
+    }()
+    
+    
+    
+    private lazy var pageContentView:HGPageContentView = {
+        /// 1. 确定内容的frame
+        let contentH = kStatusBarH + kNavigationBarH + kTitleViewH
+        let contentFrame = CGRect(x: 0, y: contentH, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - contentH)
+        /// 2. 循环创建控制器
+        var childVcs = [UIViewController]()
+        for _ in 0..<4 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor.init(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            childVcs.append(vc)
+        }
+        
+        let pageContentView = HGPageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
+        
+        return pageContentView
     }()
 
     override func viewDidLoad() {
@@ -36,6 +55,10 @@ extension HGHomeController{
         setNavigtionBar()
         /// 2. 添加TtitleView
         view.addSubview(pageTitleView)
+        
+        /// 3. 添加contentView
+        view.addSubview(pageContentView)
+        pageContentView.backgroundColor = UIColor.red
     }
     
     /// 设置导航栏

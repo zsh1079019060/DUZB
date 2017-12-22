@@ -53,12 +53,14 @@ class HGPageTitleView: UIView {
 // MARK: - 设置UI界面
 extension HGPageTitleView{
     private func setupUI(){
+        
         /// 1.添加scrollView
         addSubview(scrollView)
         scrollView.frame = bounds
         
         /// 2.添加titleView对应的label
         setTitleLabels()
+        
         /// 3.设置底线和滚动滑块
         setButtomLineAndScrollLine()
     }
