@@ -158,3 +158,9 @@ extension HGPageTitleView {
         delegate?.pageTtileView(titleView: self, selectedIndex: cureentIndex)
     }
 }
+
+extension HGPageTitleView {
+    @objc func setTitleWithProgress(progress:CGFloat,sourceIndex:Int,targetIndex:Int){
+        
+    }
+}

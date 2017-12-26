@@ -34,7 +34,7 @@ class HGHomeController: UIViewController {
         }
         
         let pageContentView = HGPageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
-        
+        pageContentView.delegate = self
         return pageContentView
     }()
 
@@ -89,6 +89,12 @@ extension HGHomeController : HGPageTitleViewDelegate{
     func pageTtileView(titleView: HGPageTitleView, selectedIndex index: Int) {
         pageContentView.setCurrentIndex(currentIndex: index)
     }
-    
-    
+  
+}
+
+// MARK: - HGPageContentViewDelegate
+extension HGHomeController : HGPageContentViewDelegate{
+    func pageContentView(contentView: HGPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
 }
