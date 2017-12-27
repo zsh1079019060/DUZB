@@ -22,6 +22,8 @@ class HGPageContentView: UIView {
     fileprivate weak var parentViewController:UIViewController?
     /// 获取当前偏移量
     fileprivate var startOffsetX:CGFloat = 0
+    /// 判断是否点击滚动
+    fileprivate var isForbidScorllDelegate:Bool = false
     
     weak var delegate:HGPageContentViewDelegate?
     /// 懒加载
@@ -82,12 +84,18 @@ extension HGPageContentView:UICollectionViewDelegate {
     /// 0.首先拿到当前要拖拽的那一个item
     /// 开始拖拽
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        isForbidScorllDelegate = false
+        
         startOffsetX = scrollView.contentOffset.x
         
     }
     
     /// 实现scrollView滚动方法
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        /// 判断是否是点击事件 
+        if isForbidScorllDelegate {return}
+        
         /// 1.获取需要的数据
         /// 获取滚动的 - 进度
         var progress:CGFloat = 0
@@ -104,7 +112,6 @@ extension HGPageContentView:UICollectionViewDelegate {
         /// 滚动的偏移量大于之前的偏移量 - 右滑
         if currentOffset > startOffsetX {
             /// FIXMI: - 警告
-//            progress = currentOffset / scrollViewW - floor(currentOffset / scrollViewW)
             /// 1. 进度 - floor(x) 即取不大于x的最大整数
             progress = currentOffset / scrollViewW - floor(currentOffset / scrollViewW)
             /// 2. 源 sourceIndex
@@ -165,6 +172,10 @@ extension HGPageContentView:UICollectionViewDataSource{
 extension HGPageContentView {
     func setCurrentIndex(currentIndex:Int) {
         
+        /// 记录需要进行执行代理方法
+        isForbidScorllDelegate = true
+        
+        ///
         let offsetX = CGFloat(currentIndex) * collectionView.frame.width
         
         collectionView.setContentOffset(CGPoint.init(x: offsetX, y: 0), animated: false)

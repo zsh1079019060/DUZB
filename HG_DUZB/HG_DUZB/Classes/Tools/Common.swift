@@ -8,8 +8,11 @@
 
 import UIKit
 
+/// iPhone 5 ~ 8
 let kStatusBarH:CGFloat = 20
+/// iPhone X
+//let kStatusBarH:CGFloat = 44
 let kNavigationBarH:CGFloat = 44
-
+let kTabBarH:CGFloat = 44
 let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.size.height

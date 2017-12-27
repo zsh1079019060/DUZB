@@ -16,6 +16,11 @@
 		FA7B356F1FEB43B8007A946F /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B356E1FEB43B8007A946F /* UIBarButtonItem+Extension.swift */; };
 		FA7B35711FEB49B0007A946F /* HGPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B35701FEB49B0007A946F /* HGPageTitleView.swift */; };
 		FA7B35731FEB4B98007A946F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B35721FEB4B98007A946F /* Common.swift */; };
+		FA860A0A1FF3274400E1EB45 /* HGRecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA860A091FF3274400E1EB45 /* HGRecommendController.swift */; };
+		FA860A0D1FF3777500E1EB45 /* HGCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA860A0B1FF3777500E1EB45 /* HGCollectionHeaderView.swift */; };
+		FA860A0E1FF3777500E1EB45 /* HGCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA860A0C1FF3777500E1EB45 /* HGCollectionHeaderView.xib */; };
+		FA860A111FF37D5700E1EB45 /* HGCollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA860A0F1FF37D5700E1EB45 /* HGCollectionNormalCell.swift */; };
+		FA860A121FF37D5700E1EB45 /* HGCollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA860A101FF37D5700E1EB45 /* HGCollectionNormalCell.xib */; };
 		FAB5104B1FEC8AF700E8CB83 /* HGPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5104A1FEC8AF700E8CB83 /* HGPageContentView.swift */; };
 		FAB5104D1FEC8E3C00E8CB83 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5104C1FEC8E3C00E8CB83 /* UIColor+Extension.swift */; };
 		FAFD95821FE1521D00F0BBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD95811FE1521D00F0BBD9 /* AppDelegate.swift */; };
@@ -33,6 +38,11 @@
 		FA7B356E1FEB43B8007A946F /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		FA7B35701FEB49B0007A946F /* HGPageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGPageTitleView.swift; sourceTree = "<group>"; };
 		FA7B35721FEB4B98007A946F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		FA860A091FF3274400E1EB45 /* HGRecommendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRecommendController.swift; sourceTree = "<group>"; };
+		FA860A0B1FF3777500E1EB45 /* HGCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGCollectionHeaderView.swift; sourceTree = "<group>"; };
+		FA860A0C1FF3777500E1EB45 /* HGCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGCollectionHeaderView.xib; sourceTree = "<group>"; };
+		FA860A0F1FF37D5700E1EB45 /* HGCollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGCollectionNormalCell.swift; sourceTree = "<group>"; };
+		FA860A101FF37D5700E1EB45 /* HGCollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGCollectionNormalCell.xib; sourceTree = "<group>"; };
 		FAB5104A1FEC8AF700E8CB83 /* HGPageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGPageContentView.swift; sourceTree = "<group>"; };
 		FAB5104C1FEC8E3C00E8CB83 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FAFD957E1FE1521D00F0BBD9 /* HG_DUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HG_DUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +68,8 @@
 			children = (
 				FA7B35701FEB49B0007A946F /* HGPageTitleView.swift */,
 				FAB5104A1FEC8AF700E8CB83 /* HGPageContentView.swift */,
+				FA860A0F1FF37D5700E1EB45 /* HGCollectionNormalCell.swift */,
+				FA860A101FF37D5700E1EB45 /* HGCollectionNormalCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -82,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				FA7B35551FEB3B23007A946F /* HGHomeController.swift */,
+				FA860A091FF3274400E1EB45 /* HGRecommendController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -89,6 +102,8 @@
 		FA7B35531FEB3AB9007A946F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA860A0B1FF3777500E1EB45 /* HGCollectionHeaderView.swift */,
+				FA860A0C1FF3777500E1EB45 /* HGCollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,8 +350,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA860A0E1FF3777500E1EB45 /* HGCollectionHeaderView.xib in Resources */,
 				FAFD958C1FE1521D00F0BBD9 /* LaunchScreen.storyboard in Resources */,
 				FAFD95891FE1521D00F0BBD9 /* Assets.xcassets in Resources */,
+				FA860A121FF37D5700E1EB45 /* HGCollectionNormalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,13 +366,16 @@
 			files = (
 				FA7B356F1FEB43B8007A946F /* UIBarButtonItem+Extension.swift in Sources */,
 				FA7B35711FEB49B0007A946F /* HGPageTitleView.swift in Sources */,
+				FA860A111FF37D5700E1EB45 /* HGCollectionNormalCell.swift in Sources */,
 				FA7B356A1FEB3B5C007A946F /* HGFollowController.swift in Sources */,
 				FAB5104D1FEC8E3C00E8CB83 /* UIColor+Extension.swift in Sources */,
 				FA7B356C1FEB3BF5007A946F /* HGProfileController.swift in Sources */,
 				FA7B35501FEB3A91007A946F /* HGNavigationController.swift in Sources */,
 				FA7B35561FEB3B23007A946F /* HGHomeController.swift in Sources */,
+				FA860A0A1FF3274400E1EB45 /* HGRecommendController.swift in Sources */,
 				FA7B35511FEB3A91007A946F /* HGTabBarController.swift in Sources */,
 				FA7B355B1FEB3B35007A946F /* HGLiveController.swift in Sources */,
+				FA860A0D1FF3777500E1EB45 /* HGCollectionHeaderView.swift in Sources */,
 				FA7B35731FEB4B98007A946F /* Common.swift in Sources */,
 				FAB5104B1FEC8AF700E8CB83 /* HGPageContentView.swift in Sources */,
 				FAFD95821FE1521D00F0BBD9 /* AppDelegate.swift in Sources */,
