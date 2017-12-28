@@ -11,7 +11,9 @@ import UIKit
 private let kItemMargin:CGFloat = 10
 private let kItemW = (SCREEN_WIDTH - kItemMargin * 3)/2
 private let KItemH = (kItemW * 3)/4
+private let KPrettyItemH = (kItemW * 4)/3
 private let kNormalCell = "kNormalCell"
+private let kPrettyCell = "kPrettyCell"
 /// 组头
 private let kHeaderViewH:CGFloat = 50
 private let kHeaderView = "kHeaderView"
@@ -36,11 +38,13 @@ class HGRecommendController: UIViewController {
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         
         collectionView.dataSource = self
+        collectionView.delegate = self
         /// 设置 collectionView 内边距拉伸 (滚动到最后显示不全 )
         collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         collectionView.backgroundColor = UIColor.white
         /// 注册cellID
         collectionView.register(UINib(nibName: "HGCollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCell)
+        collectionView.register(UINib(nibName: "HGPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCell)
         
         /// 注册头部id
         collectionView.register(UINib(nibName: "HGCollectionHeaderView", bundle: nil) , forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderView)
@@ -67,7 +71,7 @@ extension HGRecommendController {
 
 
 // MARK: - 遵守UICollectionViewDataSource协议
-extension HGRecommendController:UICollectionViewDataSource{
+extension HGRecommendController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 12
@@ -82,8 +86,14 @@ extension HGRecommendController:UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCell, for: indexPath)
-        
+        let cell: UICollectionViewCell!
+        if indexPath.section == 1 {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCell, for: indexPath)
+            
+        }else{
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCell, for: indexPath)
+            
+        }
         return cell
     }
     
@@ -92,5 +102,14 @@ extension HGRecommendController:UICollectionViewDataSource{
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderView, for: indexPath)
         
         return headerView
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.section == 1 {
+            return CGSize(width: kItemW, height: KPrettyItemH
+            )
+        }else{
+            return CGSize(width: kItemW, height: KItemH)
+        }
     }
 }

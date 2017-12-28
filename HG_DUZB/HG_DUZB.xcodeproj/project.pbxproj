@@ -21,6 +21,8 @@
 		FA860A0E1FF3777500E1EB45 /* HGCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA860A0C1FF3777500E1EB45 /* HGCollectionHeaderView.xib */; };
 		FA860A111FF37D5700E1EB45 /* HGCollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA860A0F1FF37D5700E1EB45 /* HGCollectionNormalCell.swift */; };
 		FA860A121FF37D5700E1EB45 /* HGCollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA860A101FF37D5700E1EB45 /* HGCollectionNormalCell.xib */; };
+		FA860A151FF4825600E1EB45 /* HGPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA860A131FF4825600E1EB45 /* HGPrettyCell.swift */; };
+		FA860A161FF4825600E1EB45 /* HGPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA860A141FF4825600E1EB45 /* HGPrettyCell.xib */; };
 		FAB5104B1FEC8AF700E8CB83 /* HGPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5104A1FEC8AF700E8CB83 /* HGPageContentView.swift */; };
 		FAB5104D1FEC8E3C00E8CB83 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5104C1FEC8E3C00E8CB83 /* UIColor+Extension.swift */; };
 		FAFD95821FE1521D00F0BBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD95811FE1521D00F0BBD9 /* AppDelegate.swift */; };
@@ -43,6 +45,8 @@
 		FA860A0C1FF3777500E1EB45 /* HGCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGCollectionHeaderView.xib; sourceTree = "<group>"; };
 		FA860A0F1FF37D5700E1EB45 /* HGCollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGCollectionNormalCell.swift; sourceTree = "<group>"; };
 		FA860A101FF37D5700E1EB45 /* HGCollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGCollectionNormalCell.xib; sourceTree = "<group>"; };
+		FA860A131FF4825600E1EB45 /* HGPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGPrettyCell.swift; sourceTree = "<group>"; };
+		FA860A141FF4825600E1EB45 /* HGPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGPrettyCell.xib; sourceTree = "<group>"; };
 		FAB5104A1FEC8AF700E8CB83 /* HGPageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGPageContentView.swift; sourceTree = "<group>"; };
 		FAB5104C1FEC8E3C00E8CB83 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FAFD957E1FE1521D00F0BBD9 /* HG_DUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HG_DUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +74,8 @@
 				FAB5104A1FEC8AF700E8CB83 /* HGPageContentView.swift */,
 				FA860A0F1FF37D5700E1EB45 /* HGCollectionNormalCell.swift */,
 				FA860A101FF37D5700E1EB45 /* HGCollectionNormalCell.xib */,
+				FA860A131FF4825600E1EB45 /* HGPrettyCell.swift */,
+				FA860A141FF4825600E1EB45 /* HGPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 			files = (
 				FA860A0E1FF3777500E1EB45 /* HGCollectionHeaderView.xib in Resources */,
 				FAFD958C1FE1521D00F0BBD9 /* LaunchScreen.storyboard in Resources */,
+				FA860A161FF4825600E1EB45 /* HGPrettyCell.xib in Resources */,
 				FAFD95891FE1521D00F0BBD9 /* Assets.xcassets in Resources */,
 				FA860A121FF37D5700E1EB45 /* HGCollectionNormalCell.xib in Resources */,
 			);
@@ -368,6 +375,7 @@
 				FA7B35711FEB49B0007A946F /* HGPageTitleView.swift in Sources */,
 				FA860A111FF37D5700E1EB45 /* HGCollectionNormalCell.swift in Sources */,
 				FA7B356A1FEB3B5C007A946F /* HGFollowController.swift in Sources */,
+				FA860A151FF4825600E1EB45 /* HGPrettyCell.swift in Sources */,
 				FAB5104D1FEC8E3C00E8CB83 /* UIColor+Extension.swift in Sources */,
 				FA7B356C1FEB3BF5007A946F /* HGProfileController.swift in Sources */,
 				FA7B35501FEB3A91007A946F /* HGNavigationController.swift in Sources */,
