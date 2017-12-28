@@ -19,6 +19,8 @@ private let kHeaderViewH:CGFloat = 50
 private let kHeaderView = "kHeaderView"
 class HGRecommendController: UIViewController {
     
+    private lazy var recommendVM:HGRecommentViewModel = HGRecommentViewModel()
+    
     // MARK: - 懒加载
     fileprivate lazy var collectionView:UICollectionView = { [unowned self] in
         /// 1. 创建布局
@@ -58,6 +60,9 @@ class HGRecommendController: UIViewController {
         view.backgroundColor = UIColor.purple
         
         setupUI()
+        
+        /// 2
+        loadData()
     }
 }
 
@@ -66,6 +71,14 @@ extension HGRecommendController {
     fileprivate func setupUI(){
         /// 1. collectionView添加到view上
         view.addSubview(collectionView)
+   
+    }
+}
+
+// MARK: - 请求数据
+extension HGRecommendController {
+    fileprivate func loadData(){
+       recommendVM.requestData()
     }
 }
 

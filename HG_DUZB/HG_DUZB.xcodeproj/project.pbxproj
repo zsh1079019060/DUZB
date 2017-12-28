@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C32121A5FC58F2AE2C790EB1 /* Pods_HG_DUZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F02EF4E83A5B925F264957F /* Pods_HG_DUZB.framework */; };
+		FA3732391FF5285E00BB2ACC /* HGRecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3732381FF5285E00BB2ACC /* HGRecommentViewModel.swift */; };
 		FA7B35501FEB3A91007A946F /* HGNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B354E1FEB3A91007A946F /* HGNavigationController.swift */; };
 		FA7B35511FEB3A91007A946F /* HGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B354F1FEB3A91007A946F /* HGTabBarController.swift */; };
 		FA7B35561FEB3B23007A946F /* HGHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B35551FEB3B23007A946F /* HGHomeController.swift */; };
@@ -23,6 +25,7 @@
 		FA860A121FF37D5700E1EB45 /* HGCollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA860A101FF37D5700E1EB45 /* HGCollectionNormalCell.xib */; };
 		FA860A151FF4825600E1EB45 /* HGPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA860A131FF4825600E1EB45 /* HGPrettyCell.swift */; };
 		FA860A161FF4825600E1EB45 /* HGPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA860A141FF4825600E1EB45 /* HGPrettyCell.xib */; };
+		FA860A381FF5216800E1EB45 /* HGNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA860A371FF5216700E1EB45 /* HGNetworkTools.swift */; };
 		FAB5104B1FEC8AF700E8CB83 /* HGPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5104A1FEC8AF700E8CB83 /* HGPageContentView.swift */; };
 		FAB5104D1FEC8E3C00E8CB83 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5104C1FEC8E3C00E8CB83 /* UIColor+Extension.swift */; };
 		FAFD95821FE1521D00F0BBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD95811FE1521D00F0BBD9 /* AppDelegate.swift */; };
@@ -31,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		113C151600EB814B43212012 /* Pods-HG_DUZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HG_DUZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HG_DUZB/Pods-HG_DUZB.debug.xcconfig"; sourceTree = "<group>"; };
+		5F02EF4E83A5B925F264957F /* Pods_HG_DUZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HG_DUZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78944910BAC0FF03F95ED7D8 /* Pods-HG_DUZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HG_DUZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-HG_DUZB/Pods-HG_DUZB.release.xcconfig"; sourceTree = "<group>"; };
+		FA3732381FF5285E00BB2ACC /* HGRecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRecommentViewModel.swift; sourceTree = "<group>"; };
 		FA7B354E1FEB3A91007A946F /* HGNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGNavigationController.swift; sourceTree = "<group>"; };
 		FA7B354F1FEB3A91007A946F /* HGTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGTabBarController.swift; sourceTree = "<group>"; };
 		FA7B35551FEB3B23007A946F /* HGHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGHomeController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,7 @@
 		FA860A101FF37D5700E1EB45 /* HGCollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGCollectionNormalCell.xib; sourceTree = "<group>"; };
 		FA860A131FF4825600E1EB45 /* HGPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGPrettyCell.swift; sourceTree = "<group>"; };
 		FA860A141FF4825600E1EB45 /* HGPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGPrettyCell.xib; sourceTree = "<group>"; };
+		FA860A371FF5216700E1EB45 /* HGNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGNetworkTools.swift; sourceTree = "<group>"; };
 		FAB5104A1FEC8AF700E8CB83 /* HGPageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGPageContentView.swift; sourceTree = "<group>"; };
 		FAB5104C1FEC8E3C00E8CB83 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FAFD957E1FE1521D00F0BBD9 /* HG_DUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HG_DUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,12 +69,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32121A5FC58F2AE2C790EB1 /* Pods_HG_DUZB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22A36C0FA4D100A0D24B926D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				113C151600EB814B43212012 /* Pods-HG_DUZB.debug.xcconfig */,
+				78944910BAC0FF03F95ED7D8 /* Pods-HG_DUZB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A142D7121AB582D88E514C47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F02EF4E83A5B925F264957F /* Pods_HG_DUZB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA3732371FF5282D00BB2ACC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA3732381FF5285E00BB2ACC /* HGRecommentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FA7B354B1FEB3A90007A946F /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +246,7 @@
 		FA7F98141FE948850055B157 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FA3732371FF5282D00BB2ACC /* ViewModel */,
 				FA7B35521FEB3AB9007A946F /* Controller */,
 				FA7B35541FEB3AB9007A946F /* Model */,
 				FA7B35531FEB3AB9007A946F /* View */,
@@ -224,6 +259,7 @@
 			children = (
 				FA7B356D1FEB435A007A946F /* Extension */,
 				FA7B35721FEB4B98007A946F /* Common.swift */,
+				FA860A371FF5216700E1EB45 /* HGNetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -273,6 +309,8 @@
 			children = (
 				FAFD95801FE1521D00F0BBD9 /* HG_DUZB */,
 				FAFD957F1FE1521D00F0BBD9 /* Products */,
+				22A36C0FA4D100A0D24B926D /* Pods */,
+				A142D7121AB582D88E514C47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -303,9 +341,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAFD95901FE1521D00F0BBD9 /* Build configuration list for PBXNativeTarget "HG_DUZB" */;
 			buildPhases = (
+				13F25B876947BFE3C1AD7856 /* [CP] Check Pods Manifest.lock */,
 				FAFD957A1FE1521D00F0BBD9 /* Sources */,
 				FAFD957B1FE1521D00F0BBD9 /* Frameworks */,
 				FAFD957C1FE1521D00F0BBD9 /* Resources */,
+				ABBF572D2C1E65AB9D6ABD48 /* [CP] Embed Pods Frameworks */,
+				A1E65C6E6D4184A64AB2E6AB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -366,6 +407,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13F25B876947BFE3C1AD7856 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HG_DUZB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1E65C6E6D4184A64AB2E6AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HG_DUZB/Pods-HG_DUZB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABBF572D2C1E65AB9D6ABD48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HG_DUZB/Pods-HG_DUZB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HG_DUZB/Pods-HG_DUZB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FAFD957A1FE1521D00F0BBD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -373,6 +468,7 @@
 			files = (
 				FA7B356F1FEB43B8007A946F /* UIBarButtonItem+Extension.swift in Sources */,
 				FA7B35711FEB49B0007A946F /* HGPageTitleView.swift in Sources */,
+				FA3732391FF5285E00BB2ACC /* HGRecommentViewModel.swift in Sources */,
 				FA860A111FF37D5700E1EB45 /* HGCollectionNormalCell.swift in Sources */,
 				FA7B356A1FEB3B5C007A946F /* HGFollowController.swift in Sources */,
 				FA860A151FF4825600E1EB45 /* HGPrettyCell.swift in Sources */,
@@ -382,6 +478,7 @@
 				FA7B35561FEB3B23007A946F /* HGHomeController.swift in Sources */,
 				FA860A0A1FF3274400E1EB45 /* HGRecommendController.swift in Sources */,
 				FA7B35511FEB3A91007A946F /* HGTabBarController.swift in Sources */,
+				FA860A381FF5216800E1EB45 /* HGNetworkTools.swift in Sources */,
 				FA7B355B1FEB3B35007A946F /* HGLiveController.swift in Sources */,
 				FA860A0D1FF3777500E1EB45 /* HGCollectionHeaderView.swift in Sources */,
 				FA7B35731FEB4B98007A946F /* Common.swift in Sources */,
@@ -513,6 +610,7 @@
 		};
 		FAFD95911FE1521D00F0BBD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 113C151600EB814B43212012 /* Pods-HG_DUZB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -530,6 +628,7 @@
 		};
 		FAFD95921FE1521D00F0BBD9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78944910BAC0FF03F95ED7D8 /* Pods-HG_DUZB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
