@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C32121A5FC58F2AE2C790EB1 /* Pods_HG_DUZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F02EF4E83A5B925F264957F /* Pods_HG_DUZB.framework */; };
 		FA3732391FF5285E00BB2ACC /* HGRecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3732381FF5285E00BB2ACC /* HGRecommentViewModel.swift */; };
+		FA37323B1FF52CE400BB2ACC /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37323A1FF52CE400BB2ACC /* NSDate+Extension.swift */; };
+		FA37323D1FF5311700BB2ACC /* HGAnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37323C1FF5311700BB2ACC /* HGAnchorGroup.swift */; };
+		FA37323F1FF5E82200BB2ACC /* HGAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37323E1FF5E82200BB2ACC /* HGAnchorModel.swift */; };
 		FA7B35501FEB3A91007A946F /* HGNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B354E1FEB3A91007A946F /* HGNavigationController.swift */; };
 		FA7B35511FEB3A91007A946F /* HGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B354F1FEB3A91007A946F /* HGTabBarController.swift */; };
 		FA7B35561FEB3B23007A946F /* HGHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B35551FEB3B23007A946F /* HGHomeController.swift */; };
@@ -38,6 +41,9 @@
 		5F02EF4E83A5B925F264957F /* Pods_HG_DUZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HG_DUZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78944910BAC0FF03F95ED7D8 /* Pods-HG_DUZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HG_DUZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-HG_DUZB/Pods-HG_DUZB.release.xcconfig"; sourceTree = "<group>"; };
 		FA3732381FF5285E00BB2ACC /* HGRecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRecommentViewModel.swift; sourceTree = "<group>"; };
+		FA37323A1FF52CE400BB2ACC /* NSDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
+		FA37323C1FF5311700BB2ACC /* HGAnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGAnchorGroup.swift; sourceTree = "<group>"; };
+		FA37323E1FF5E82200BB2ACC /* HGAnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGAnchorModel.swift; sourceTree = "<group>"; };
 		FA7B354E1FEB3A91007A946F /* HGNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGNavigationController.swift; sourceTree = "<group>"; };
 		FA7B354F1FEB3A91007A946F /* HGTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGTabBarController.swift; sourceTree = "<group>"; };
 		FA7B35551FEB3B23007A946F /* HGHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGHomeController.swift; sourceTree = "<group>"; };
@@ -117,6 +123,8 @@
 		FA7B354C1FEB3A90007A946F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA37323C1FF5311700BB2ACC /* HGAnchorGroup.swift */,
+				FA37323E1FF5E82200BB2ACC /* HGAnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +234,7 @@
 			children = (
 				FA7B356E1FEB43B8007A946F /* UIBarButtonItem+Extension.swift */,
 				FAB5104C1FEC8E3C00E8CB83 /* UIColor+Extension.swift */,
+				FA37323A1FF52CE400BB2ACC /* NSDate+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -475,11 +484,14 @@
 				FAB5104D1FEC8E3C00E8CB83 /* UIColor+Extension.swift in Sources */,
 				FA7B356C1FEB3BF5007A946F /* HGProfileController.swift in Sources */,
 				FA7B35501FEB3A91007A946F /* HGNavigationController.swift in Sources */,
+				FA37323F1FF5E82200BB2ACC /* HGAnchorModel.swift in Sources */,
+				FA37323D1FF5311700BB2ACC /* HGAnchorGroup.swift in Sources */,
 				FA7B35561FEB3B23007A946F /* HGHomeController.swift in Sources */,
 				FA860A0A1FF3274400E1EB45 /* HGRecommendController.swift in Sources */,
 				FA7B35511FEB3A91007A946F /* HGTabBarController.swift in Sources */,
 				FA860A381FF5216800E1EB45 /* HGNetworkTools.swift in Sources */,
 				FA7B355B1FEB3B35007A946F /* HGLiveController.swift in Sources */,
+				FA37323B1FF52CE400BB2ACC /* NSDate+Extension.swift in Sources */,
 				FA860A0D1FF3777500E1EB45 /* HGCollectionHeaderView.swift in Sources */,
 				FA7B35731FEB4B98007A946F /* Common.swift in Sources */,
 				FAB5104B1FEC8AF700E8CB83 /* HGPageContentView.swift in Sources */,
