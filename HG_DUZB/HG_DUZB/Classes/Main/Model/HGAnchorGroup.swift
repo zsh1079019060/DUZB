@@ -18,7 +18,7 @@ class HGAnchorGroup: NSObject {
                 return
             }
             for dict in room_list {
-                anchorModel.append(HGAnchorModel.init(dict: dict))
+                anchors.append(HGAnchorModel.init(dict: dict))
             }
         }
     }
@@ -31,10 +31,14 @@ class HGAnchorGroup: NSObject {
     /// 组头标
     @objc var icon_name:String = "home_header_normal"
     
-    ///  懒加载模型
-    lazy var anchorModel:[HGAnchorModel] = [HGAnchorModel]()
+    /// 懒加载主播模型对象数组 
+    lazy var anchors:[HGAnchorModel] = [HGAnchorModel]()
     
     /// 构造函数
+    override init() {
+        
+    }
+    
     init(dict:[String : AnyObject]) {
         super.init()
         
