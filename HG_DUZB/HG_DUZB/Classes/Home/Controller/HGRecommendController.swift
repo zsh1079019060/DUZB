@@ -91,8 +91,14 @@ extension HGRecommendController {
 // MARK: - 请求数据
 extension HGRecommendController {
     fileprivate func loadData(){
+        
+        /// 1.请求 推荐数据
         recommendVM.requestData {
             self.collectionView.reloadData()
+        }
+        /// 2.请求 轮播数据
+        recommendVM.requeseCycleData {
+            self.recommentCycleView.cycleModels = self.recommendVM.cycleModel
         }
     }
 }
