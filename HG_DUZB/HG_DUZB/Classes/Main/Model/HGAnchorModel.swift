@@ -11,24 +11,24 @@ import UIKit
 class HGAnchorModel: NSObject {
 
     /// 房间号
-    var room_id:String = ""
+    @objc var room_id:Int = 0
     /// 房间图片对应的url
-    var vertical_src:String = ""
+    @objc var vertical_src:String = ""
     
     /// 0 代表手机直播 1 代表电脑直播
-    var isVertical:Int = 0
+    @objc var isVertical:Int = 0
     
     /// 房间名称
-    var room_name:String = ""
+    @objc var room_name:String = ""
     
     /// 主播名称
-    var nickname:String = ""
+    @objc var nickname:String = ""
     
     /// 观看人数
-    var online:String = ""
+    @objc var online:Int = 0
     
     /// 所在城市
-    var anchor_city:String = ""
+    @objc var anchor_city:String = ""
     
     init(dict:[String : AnyObject]) {
         super.init()
@@ -36,7 +36,7 @@ class HGAnchorModel: NSObject {
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
-         print(value ?? "",key)
+         
     }
     
 }

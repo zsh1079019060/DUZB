@@ -143,6 +143,10 @@ extension HGPageTitleView {
         guard let currentLabel = tapGes.view as? UILabel else{
             return
         }
+        /// 如果重复点击同一个title，颜色不变
+        if currentLabel.tag == cureentIndex {
+            return
+        }
         /// 2. 获取之前的label
         let oldLabel = titleLabels[cureentIndex]
         /// 3. 设置文字颜色

@@ -23,7 +23,7 @@ class HGAnchorGroup: NSObject {
         }
     }
     
-    @objc var tag_id:String?
+    @objc var tag_id:Int = 0
     
     /// 组显示的标题
     @objc var tag_name:String?
@@ -59,7 +59,7 @@ class HGAnchorGroup: NSObject {
      */
     /// 重写这个方法  是为了防止 有的参数没有用到，程序运行报错 
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        print(value ?? "",key)
+        
     }
     
 

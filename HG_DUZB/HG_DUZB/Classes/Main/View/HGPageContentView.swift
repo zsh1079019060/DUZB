@@ -140,7 +140,6 @@ extension HGPageContentView:UICollectionViewDelegate {
         }
         
         /// 将 progress、targetIndex、sourceIndex传递给titleView
-        
         print("progress\(progress)---targetIndex\(targetIndex)--sourceIndex\(sourceIndex)")
         
         delegate?.pageContentView(contentView: self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)

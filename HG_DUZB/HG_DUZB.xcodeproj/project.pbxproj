@@ -31,6 +31,7 @@
 		FA860A381FF5216800E1EB45 /* HGNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA860A371FF5216700E1EB45 /* HGNetworkTools.swift */; };
 		FAB5104B1FEC8AF700E8CB83 /* HGPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5104A1FEC8AF700E8CB83 /* HGPageContentView.swift */; };
 		FAB5104D1FEC8E3C00E8CB83 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5104C1FEC8E3C00E8CB83 /* UIColor+Extension.swift */; };
+		FAD7AD5A1FFC7FCE0010DFE1 /* HGBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7AD591FFC7FCE0010DFE1 /* HGBaseCell.swift */; };
 		FAFD95821FE1521D00F0BBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD95811FE1521D00F0BBD9 /* AppDelegate.swift */; };
 		FAFD95891FE1521D00F0BBD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFD95881FE1521D00F0BBD9 /* Assets.xcassets */; };
 		FAFD958C1FE1521D00F0BBD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFD958A1FE1521D00F0BBD9 /* LaunchScreen.storyboard */; };
@@ -63,6 +64,7 @@
 		FA860A371FF5216700E1EB45 /* HGNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGNetworkTools.swift; sourceTree = "<group>"; };
 		FAB5104A1FEC8AF700E8CB83 /* HGPageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGPageContentView.swift; sourceTree = "<group>"; };
 		FAB5104C1FEC8E3C00E8CB83 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		FAD7AD591FFC7FCE0010DFE1 /* HGBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGBaseCell.swift; sourceTree = "<group>"; };
 		FAFD957E1FE1521D00F0BBD9 /* HG_DUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HG_DUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFD95811FE1521D00F0BBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFD95881FE1521D00F0BBD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				FA860A101FF37D5700E1EB45 /* HGCollectionNormalCell.xib */,
 				FA860A131FF4825600E1EB45 /* HGPrettyCell.swift */,
 				FA860A141FF4825600E1EB45 /* HGPrettyCell.xib */,
+				FAD7AD591FFC7FCE0010DFE1 /* HGBaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -458,10 +461,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HG_DUZB/Pods-HG_DUZB-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -486,6 +491,7 @@
 				FA7B35501FEB3A91007A946F /* HGNavigationController.swift in Sources */,
 				FA37323F1FF5E82200BB2ACC /* HGAnchorModel.swift in Sources */,
 				FA37323D1FF5311700BB2ACC /* HGAnchorGroup.swift in Sources */,
+				FAD7AD5A1FFC7FCE0010DFE1 /* HGBaseCell.swift in Sources */,
 				FA7B35561FEB3B23007A946F /* HGHomeController.swift in Sources */,
 				FA860A0A1FF3274400E1EB45 /* HGRecommendController.swift in Sources */,
 				FA7B35511FEB3A91007A946F /* HGTabBarController.swift in Sources */,

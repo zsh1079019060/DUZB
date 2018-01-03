@@ -94,19 +94,26 @@ extension HGRecommendController:UICollectionViewDataSource,UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let group = recommendVM.ancherGroups[section]
+        
         return group.anchors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell!
+        /// 取出模型
+        let group = recommendVM.ancherGroups[indexPath.section]
+        /// 取出每个主播的模型
+        let anchor = group.anchors[indexPath.item]
+        
+        var  cell : HGBaseCell?
+        
         if indexPath.section == 1 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCell, for: indexPath)
-            
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCell, for: indexPath) as? HGPrettyCell
         }else{
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCell, for: indexPath)
-            
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCell, for: indexPath) as? HGCollectionNormalCell
         }
-        return cell
+        cell?.anchor = anchor
+        
+        return cell!
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
