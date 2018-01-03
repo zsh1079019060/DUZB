@@ -14,6 +14,7 @@ private let KItemH = (kItemW * 3)/4
 private let KPrettyItemH = (kItemW * 4)/3
 private let kNormalCell = "kNormalCell"
 private let kPrettyCell = "kPrettyCell"
+private let kCycleViewH = SCREEN_WIDTH * 3 / 8
 /// 组头
 private let kHeaderViewH:CGFloat = 50
 private let kHeaderView = "kHeaderView"
@@ -53,6 +54,13 @@ class HGRecommendController: UIViewController {
         
         return collectionView
     }()
+    /// 轮播图
+    fileprivate lazy var recommentCycleView:HGRecommentCycleView = {
+        let recommentCycleView = HGRecommentCycleView.recommentCycleView()
+        // 设置frame
+        recommentCycleView.frame = CGRect.init(x: 0, y: -kCycleViewH, width: SCREEN_WIDTH, height: kCycleViewH)
+        return recommentCycleView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +79,12 @@ extension HGRecommendController {
     fileprivate func setupUI(){
         /// 1. collectionView添加到view上
         view.addSubview(collectionView)
-   
+        
+        /// 2.将recommentCycleView添加到 collectionView中
+        collectionView.addSubview(recommentCycleView)
+        
+        /// 3.设置内边距
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
     }
 }
 
