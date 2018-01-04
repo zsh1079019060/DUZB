@@ -10,6 +10,8 @@ import UIKit
 private let collectionCell = "collectionCell"
 
 class HGRecommentCycleView: UIView {
+    /// 定时器
+    var timer:Timer?
     
     /// 属性
     var cycleModels : [HGCycelModel]? {
@@ -19,6 +21,13 @@ class HGRecommentCycleView: UIView {
             /// 设置pageControl
             pageControl.numberOfPages = cycleModels?.count ?? 0
             
+            /// 默认滚到中间某个位置
+            let indexPath = NSIndexPath.init(item: (cycleModels?.count ?? 0)*10, section: 0)
+            collectionView.scrollToItem(at: indexPath as IndexPath, at: .left, animated: false)
+            
+            /// 移除定时器
+            removeTimer()
+            setTimer()
         }
     }
 
@@ -60,13 +69,13 @@ extension HGRecommentCycleView {
 extension HGRecommentCycleView :UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cycleModels?.count ?? 0
+        return (cycleModels?.count ?? 0)*10000
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:  collectionCell, for: indexPath) as? HGCollectionCycleCell
         /// 获取数据
-        cell?.cycleModel = cycleModels![indexPath.item]
+        cell?.cycleModel = cycleModels![indexPath.item % (cycleModels?.count)!]
         
         return cell!
     }
@@ -79,7 +88,39 @@ extension HGRecommentCycleView:UICollectionViewDelegate{
         /// 获取偏移量
         let offsetX = scrollView.contentOffset.x + scrollView.bounds.width * 0.5
         /// 计算pageControl.currentPage
-        self.pageControl.currentPage = Int(offsetX / scrollView.bounds.width)
+        self.pageControl.currentPage = Int(offsetX / scrollView.bounds.width) % (cycleModels?.count ?? 1)
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        removeTimer()
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        setTimer()
+    }
+}
 
+// MARK: - 定时器
+extension HGRecommentCycleView {
+    fileprivate func setTimer(){
+        timer = Timer(timeInterval: 3.0, target: self, selector: #selector(scrollToNext), userInfo: nil, repeats: true)
+        RunLoop.main.add(timer!, forMode: .commonModes)
+        
+    }
+    
+    fileprivate func removeTimer(){
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    @objc func scrollToNext(){
+        /// 获取滚动的偏移量
+        let currenOffsetX = collectionView.contentOffset.x
+        let offsetX = currenOffsetX + collectionView.bounds.width
+        
+        /// 滚动的位置
+        collectionView.setContentOffset(CGPoint.init(x: offsetX, y: 0), animated: true)
+        
+        
     }
 }
