@@ -35,6 +35,8 @@
 		FAD7AD5C1FFC86530010DFE1 /* HGRecommentCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7AD5B1FFC86530010DFE1 /* HGRecommentCycleView.swift */; };
 		FAD7AD5E1FFC86760010DFE1 /* HGRecommentCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7AD5D1FFC86760010DFE1 /* HGRecommentCycleView.xib */; };
 		FAD7AD601FFCB4E20010DFE1 /* HGCycelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7AD5F1FFCB4E20010DFE1 /* HGCycelModel.swift */; };
+		FAD7AD631FFCD33E0010DFE1 /* HGCollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7AD611FFCD33E0010DFE1 /* HGCollectionCycleCell.swift */; };
+		FAD7AD641FFCD33E0010DFE1 /* HGCollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7AD621FFCD33E0010DFE1 /* HGCollectionCycleCell.xib */; };
 		FAFD95821FE1521D00F0BBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD95811FE1521D00F0BBD9 /* AppDelegate.swift */; };
 		FAFD95891FE1521D00F0BBD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFD95881FE1521D00F0BBD9 /* Assets.xcassets */; };
 		FAFD958C1FE1521D00F0BBD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFD958A1FE1521D00F0BBD9 /* LaunchScreen.storyboard */; };
@@ -71,6 +73,8 @@
 		FAD7AD5B1FFC86530010DFE1 /* HGRecommentCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRecommentCycleView.swift; sourceTree = "<group>"; };
 		FAD7AD5D1FFC86760010DFE1 /* HGRecommentCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGRecommentCycleView.xib; sourceTree = "<group>"; };
 		FAD7AD5F1FFCB4E20010DFE1 /* HGCycelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGCycelModel.swift; sourceTree = "<group>"; };
+		FAD7AD611FFCD33E0010DFE1 /* HGCollectionCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGCollectionCycleCell.swift; sourceTree = "<group>"; };
+		FAD7AD621FFCD33E0010DFE1 /* HGCollectionCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGCollectionCycleCell.xib; sourceTree = "<group>"; };
 		FAFD957E1FE1521D00F0BBD9 /* HG_DUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HG_DUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFD95811FE1521D00F0BBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFD95881FE1521D00F0BBD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 				FA860A0C1FF3777500E1EB45 /* HGCollectionHeaderView.xib */,
 				FAD7AD5B1FFC86530010DFE1 /* HGRecommentCycleView.swift */,
 				FAD7AD5D1FFC86760010DFE1 /* HGRecommentCycleView.xib */,
+				FAD7AD611FFCD33E0010DFE1 /* HGCollectionCycleCell.swift */,
+				FAD7AD621FFCD33E0010DFE1 /* HGCollectionCycleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -424,6 +430,7 @@
 				FAFD95891FE1521D00F0BBD9 /* Assets.xcassets in Resources */,
 				FA860A121FF37D5700E1EB45 /* HGCollectionNormalCell.xib in Resources */,
 				FAD7AD5E1FFC86760010DFE1 /* HGRecommentCycleView.xib in Resources */,
+				FAD7AD641FFCD33E0010DFE1 /* HGCollectionCycleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +519,7 @@
 				FA37323B1FF52CE400BB2ACC /* NSDate+Extension.swift in Sources */,
 				FA860A0D1FF3777500E1EB45 /* HGCollectionHeaderView.swift in Sources */,
 				FA7B35731FEB4B98007A946F /* Common.swift in Sources */,
+				FAD7AD631FFCD33E0010DFE1 /* HGCollectionCycleCell.swift in Sources */,
 				FAB5104B1FEC8AF700E8CB83 /* HGPageContentView.swift in Sources */,
 				FAFD95821FE1521D00F0BBD9 /* AppDelegate.swift in Sources */,
 			);

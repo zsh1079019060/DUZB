@@ -31,7 +31,7 @@ class HGRecommentCycleView: UIView {
         /// 不随父控件拉伸而拉伸 
         autoresizingMask = .init(rawValue: 0)
         /// 注册cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: collectionCell)
+        collectionView.register(UINib.init(nibName: "HGCollectionCycleCell", bundle: nil), forCellWithReuseIdentifier: collectionCell)
         
     }
     
@@ -64,11 +64,22 @@ extension HGRecommentCycleView :UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:  collectionCell, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:  collectionCell, for: indexPath) as? HGCollectionCycleCell
         /// 获取数据
-        let cycleModel = cycleModels![indexPath.item]
+        cell?.cycleModel = cycleModels![indexPath.item]
         
-        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.green
-        return cell
+        return cell!
+    }
+}
+
+// MARK: - 实现代理方法
+extension HGRecommentCycleView:UICollectionViewDelegate{
+ 
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        /// 获取偏移量
+        let offsetX = scrollView.contentOffset.x + scrollView.bounds.width * 0.5
+        /// 计算pageControl.currentPage
+        self.pageControl.currentPage = Int(offsetX / scrollView.bounds.width)
+
     }
 }

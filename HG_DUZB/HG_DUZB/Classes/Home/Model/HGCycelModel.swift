@@ -11,14 +11,14 @@ import UIKit
 class HGCycelModel: NSObject {
 
     /// 标题
-    var title:String = ""
+    @objc var title:String = ""
     /// 图片地址
-    var pic_url:String = ""
+    @objc var pic_url:String = ""
     /// 主播信息对应数据模型对象
-    var anchor:HGAnchorModel?
+    @objc var anchor:HGAnchorModel?
     
     /// 主播信息对应字典
-    var room:[String:AnyObject]? {
+    @objc var room:[String:AnyObject]? {
         didSet{
             guard let room = room else {
                 return
