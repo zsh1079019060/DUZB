@@ -11,6 +11,8 @@ private let kEdgeMargin:CGFloat = 10
 private let kItemW:CGFloat = (SCREEN_WIDTH - 2 * kEdgeMargin) / 3
 private let kItemH:CGFloat = kItemW*6/5
 private let gameCellId = "gameCellId"
+private let kHeaderID = "kHeaderID"
+private let kHeaderViewH:CGFloat = 50
 class HGGameViewController: UIViewController {
     
     fileprivate lazy var gameVM:HGGameViewModel = HGGameViewModel()
@@ -21,8 +23,13 @@ class HGGameViewController: UIViewController {
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.sectionInset = UIEdgeInsets(top: 0, left: kEdgeMargin, bottom: 0, right: kEdgeMargin)
+        /// 设置组头
+        layout.headerReferenceSize = CGSize(width: SCREEN_WIDTH, height: kHeaderViewH)
+        
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionView.register(UINib.init(nibName: "HGCollectionGameCell", bundle: nil), forCellWithReuseIdentifier: gameCellId)
+        collectionView.register(UINib(nibName: "HGCollectionHeaderView", bundle: nil) , forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderID)
+        
         collectionView.backgroundColor = UIColor.white
         collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         collectionView.dataSource = self
@@ -67,5 +74,14 @@ extension HGGameViewController:UICollectionViewDataSource{
         cell?.baseGameModel = gameVM.gameModels[indexPath.item]
          
         return cell!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderID, for: indexPath) as? HGCollectionHeaderView
+        
+        header?.titleLabel.text = "全部"
+        header?.iconImageView.image = UIImage(named: "Img_orange")
+        header?.moreLine.isHidden = true
+        return header!
     }
 }
