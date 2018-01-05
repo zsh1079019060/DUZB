@@ -15,6 +15,7 @@ private let KPrettyItemH = (kItemW * 4)/3
 private let kNormalCell = "kNormalCell"
 private let kPrettyCell = "kPrettyCell"
 private let kCycleViewH = SCREEN_WIDTH * 3 / 8
+private let kGameViewH: CGFloat = 90
 /// 组头
 private let kHeaderViewH:CGFloat = 50
 private let kHeaderView = "kHeaderView"
@@ -58,10 +59,16 @@ class HGRecommendController: UIViewController {
     fileprivate lazy var recommentCycleView:HGRecommentCycleView = {
         let recommentCycleView = HGRecommentCycleView.recommentCycleView()
         // 设置frame
-        recommentCycleView.frame = CGRect.init(x: 0, y: -kCycleViewH, width: SCREEN_WIDTH, height: kCycleViewH)
+        recommentCycleView.frame = CGRect.init(x: 0, y: -(kCycleViewH+kGameViewH), width: SCREEN_WIDTH, height: kCycleViewH)
         return recommentCycleView
     }()
-
+    /// 游戏
+    fileprivate lazy var recommentGameView:HGRecommentGameView = {
+        let recommentGameView = HGRecommentGameView.recommentGameView()
+        // 设置frame
+        recommentGameView.frame = CGRect.init(x: 0, y: -kGameViewH, width: SCREEN_WIDTH, height: kGameViewH)
+        return recommentGameView
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -84,7 +91,10 @@ extension HGRecommendController {
         collectionView.addSubview(recommentCycleView)
         
         /// 3.设置内边距
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH+kGameViewH, left: 0, bottom: 0, right: 0)
+        
+        /// 4.添加游戏
+        collectionView.addSubview(recommentGameView)
     }
 }
 

@@ -10,6 +10,7 @@ import UIKit
 private let collectionCell = "collectionCell"
 
 class HGRecommentCycleView: UIView {
+    
     /// 定时器
     var timer:Timer?
     
