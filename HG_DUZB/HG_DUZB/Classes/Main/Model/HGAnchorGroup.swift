@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HGAnchorGroup: NSObject {
+class HGAnchorGroup: HGBaseGameModel {
 
     /// 该组中对应的房间信息 - 字典数组
     /// 第二种方法
@@ -23,30 +23,12 @@ class HGAnchorGroup: NSObject {
         }
     }
     
-    @objc var tag_id:Int = 0
-    
-    /// 组显示的标题
-    @objc var tag_name:String?
-    
     /// 组头标
     @objc var icon_name:String = "home_header_normal"
     
-    /// 游戏对应图标
-    @objc var icon_url:String?
-    
     /// 懒加载主播模型对象数组 
     lazy var anchors:[HGAnchorModel] = [HGAnchorModel]()
-    
-    /// 构造函数
-    override init() {
-        
-    }
-    
-    init(dict:[String : AnyObject]) {
-        super.init()
-        
-        setValuesForKeys(dict)
-    }
+
 
     /*
      第一种方法
@@ -59,11 +41,6 @@ class HGAnchorGroup: NSObject {
             }
         }
     }
-     */
-    /// 重写这个方法  是为了防止 有的参数没有用到，程序运行报错 
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        
-    }
-    
-
+     
+    */
 }

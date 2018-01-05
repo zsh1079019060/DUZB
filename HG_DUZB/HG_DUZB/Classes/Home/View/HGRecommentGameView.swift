@@ -68,7 +68,7 @@ extension HGRecommentGameView : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "gameCellId", for: indexPath) as! HGCollectionGameCell
         
-        cell.group = groups![indexPath.item]
+        cell.baseGameModel = groups![indexPath.item]
         
 //        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.gray
         return cell

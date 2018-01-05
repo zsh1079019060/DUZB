@@ -6,14 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HGCollectionGameCell" customModule="HG_DUZB" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HGCollectionGameCell" customModule="HG_DUZB" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -21,30 +20,35 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="豪哥范范" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dET-sC-scF">
-                        <rect key="frame" x="15.5" y="65" width="49.5" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="YCw-CK-NVv"/>
-                        </constraints>
+                        <rect key="frame" x="15" y="64.5" width="50" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h32-EJ-SI3">
-                        <rect key="frame" x="17.5" y="15" width="45" height="45"/>
+                        <rect key="frame" x="17.5" y="14.5" width="45" height="45"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="45" id="2kL-xG-vBr"/>
-                            <constraint firstAttribute="width" secondItem="h32-EJ-SI3" secondAttribute="height" multiplier="1:1" id="UHw-Zu-Wl9"/>
-                            <constraint firstAttribute="width" constant="45" id="h2y-6M-acf"/>
+                            <constraint firstAttribute="width" constant="45" id="4Dv-Zf-Bam"/>
+                            <constraint firstAttribute="height" constant="45" id="YPg-aI-9Vc"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdv-nI-Rcb">
+                        <rect key="frame" x="0.0" y="90" width="80" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="Lvw-5M-dpN"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="h32-EJ-SI3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="4Ij-cj-Meb"/>
-                <constraint firstItem="h32-EJ-SI3" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="KHU-OG-yql"/>
-                <constraint firstItem="dET-sC-scF" firstAttribute="top" secondItem="h32-EJ-SI3" secondAttribute="bottom" constant="5" id="gTf-mP-Hw9"/>
-                <constraint firstAttribute="bottom" secondItem="dET-sC-scF" secondAttribute="bottom" constant="5" id="gaY-4m-McQ"/>
-                <constraint firstItem="dET-sC-scF" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ke4-J6-5Uu"/>
+                <constraint firstAttribute="bottom" secondItem="mdv-nI-Rcb" secondAttribute="bottom" constant="-1" id="Ecq-PU-Cmq"/>
+                <constraint firstAttribute="trailing" secondItem="mdv-nI-Rcb" secondAttribute="trailing" id="F2s-r9-Ndb"/>
+                <constraint firstItem="h32-EJ-SI3" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-8" id="cft-RR-vP9"/>
+                <constraint firstItem="h32-EJ-SI3" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fdW-CA-hsT"/>
+                <constraint firstItem="dET-sC-scF" firstAttribute="centerX" secondItem="h32-EJ-SI3" secondAttribute="centerX" id="mAw-HA-f6P"/>
+                <constraint firstItem="mdv-nI-Rcb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ta3-qT-Tco"/>
+                <constraint firstItem="dET-sC-scF" firstAttribute="top" secondItem="h32-EJ-SI3" secondAttribute="bottom" constant="5" id="xco-Fc-6Kf"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="82" height="75"/>

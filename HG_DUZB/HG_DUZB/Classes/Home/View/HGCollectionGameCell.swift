@@ -15,10 +15,10 @@ class HGCollectionGameCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
-    var group:HGAnchorGroup?{
+    var baseGameModel:HGBaseGameModel?{
         didSet{ 
-            titleLabel.text = group?.tag_name
-            let url = URL.init(string: group?.icon_url ?? "")
+            titleLabel.text = baseGameModel?.tag_name
+            let url = URL.init(string: baseGameModel?.icon_url ?? "")
 
             iconImageView.kf.setImage(with: url, placeholder: UIImage.init(named: "home_more_btn"))
             
