@@ -17,7 +17,7 @@ class HGCollectionCycleCell: UICollectionViewCell {
     
     var cycleModel:HGCycelModel?{
         didSet{
-            print("cycleModel?.title:\(cycleModel?.title)")
+            
             titleLabel.text = cycleModel?.title
             
             let url = URL.init(string: cycleModel?.pic_url ?? "")

@@ -18,7 +18,9 @@ class HGCollectionHeaderView: UICollectionReusableView {
     //MARK:- 定义模型属性
     var group:HGAnchorGroup? {
         didSet{
-           titleLabel.text = group?.tag_name
+           
+            titleLabel.text = group?.tag_name
+        
             iconImageView.image = UIImage(named:group?.icon_name ?? "home_header_normal")
         }
     }

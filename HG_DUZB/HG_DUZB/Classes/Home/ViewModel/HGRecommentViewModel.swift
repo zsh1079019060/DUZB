@@ -45,13 +45,13 @@ extension HGRecommentViewModel {
          "offset"
          */
         
-        let param = ["limit":"4","offset":"0","time":NSDate.getCurrentTime()]
+        let param = ["limit":"4","offset":"0","time":Date.getCurrentTime()]
         /// 热门
         /// 创建组
         let enterGroup = DispatchGroup.init()
         /// 进组
         enterGroup.enter()
-        HGNetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", parameters: ["time":NSDate.getCurrentTime()]) { (result) in
+        HGNetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", parameters: ["time":Date.getCurrentTime()]) { (result) in
             // print("========\(result)")
             /// 将result 转换成 字典类型
             guard let resuteDict = result as? [String:AnyObject] else { return }

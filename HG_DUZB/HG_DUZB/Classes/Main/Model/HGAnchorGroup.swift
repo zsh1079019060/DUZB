@@ -31,6 +31,9 @@ class HGAnchorGroup: NSObject {
     /// 组头标
     @objc var icon_name:String = "home_header_normal"
     
+    /// 游戏对应图标
+    @objc var icon_url:String?
+    
     /// 懒加载主播模型对象数组 
     lazy var anchors:[HGAnchorModel] = [HGAnchorModel]()
     

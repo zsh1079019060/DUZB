@@ -31,6 +31,7 @@ class HGHomeController: UIViewController {
         /// 2. 循环创建控制器
         var childVcs = [UIViewController]()
         childVcs.append(HGRecommendController())
+        childVcs.append(HGGameViewController())
         for _ in 0..<5 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor.init(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))

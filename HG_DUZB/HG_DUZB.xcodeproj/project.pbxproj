@@ -39,6 +39,9 @@
 		FAD7AD641FFCD33E0010DFE1 /* HGCollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7AD621FFCD33E0010DFE1 /* HGCollectionCycleCell.xib */; };
 		FAEEC9861FFF066000F8B384 /* HGRecommentGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEEC9851FFF066000F8B384 /* HGRecommentGameView.swift */; };
 		FAEEC9881FFF072800F8B384 /* HGRecommentGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEEC9871FFF072800F8B384 /* HGRecommentGameView.xib */; };
+		FAEEC98B1FFF113800F8B384 /* HGCollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEEC9891FFF113800F8B384 /* HGCollectionGameCell.swift */; };
+		FAEEC98C1FFF113800F8B384 /* HGCollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEEC98A1FFF113800F8B384 /* HGCollectionGameCell.xib */; };
+		FAEEC98E1FFF31EE00F8B384 /* HGGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEEC98D1FFF31EE00F8B384 /* HGGameViewController.swift */; };
 		FAFD95821FE1521D00F0BBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD95811FE1521D00F0BBD9 /* AppDelegate.swift */; };
 		FAFD95891FE1521D00F0BBD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFD95881FE1521D00F0BBD9 /* Assets.xcassets */; };
 		FAFD958C1FE1521D00F0BBD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFD958A1FE1521D00F0BBD9 /* LaunchScreen.storyboard */; };
@@ -79,6 +82,9 @@
 		FAD7AD621FFCD33E0010DFE1 /* HGCollectionCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGCollectionCycleCell.xib; sourceTree = "<group>"; };
 		FAEEC9851FFF066000F8B384 /* HGRecommentGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRecommentGameView.swift; sourceTree = "<group>"; };
 		FAEEC9871FFF072800F8B384 /* HGRecommentGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGRecommentGameView.xib; sourceTree = "<group>"; };
+		FAEEC9891FFF113800F8B384 /* HGCollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGCollectionGameCell.swift; sourceTree = "<group>"; };
+		FAEEC98A1FFF113800F8B384 /* HGCollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGCollectionGameCell.xib; sourceTree = "<group>"; };
+		FAEEC98D1FFF31EE00F8B384 /* HGGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGGameViewController.swift; sourceTree = "<group>"; };
 		FAFD957E1FE1521D00F0BBD9 /* HG_DUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HG_DUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFD95811FE1521D00F0BBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFD95881FE1521D00F0BBD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 			children = (
 				FA7B35551FEB3B23007A946F /* HGHomeController.swift */,
 				FA860A091FF3274400E1EB45 /* HGRecommendController.swift */,
+				FAEEC98D1FFF31EE00F8B384 /* HGGameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,6 +182,8 @@
 				FAD7AD621FFCD33E0010DFE1 /* HGCollectionCycleCell.xib */,
 				FAEEC9851FFF066000F8B384 /* HGRecommentGameView.swift */,
 				FAEEC9871FFF072800F8B384 /* HGRecommentGameView.xib */,
+				FAEEC9891FFF113800F8B384 /* HGCollectionGameCell.swift */,
+				FAEEC98A1FFF113800F8B384 /* HGCollectionGameCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -433,6 +442,7 @@
 				FA860A0E1FF3777500E1EB45 /* HGCollectionHeaderView.xib in Resources */,
 				FAFD958C1FE1521D00F0BBD9 /* LaunchScreen.storyboard in Resources */,
 				FA860A161FF4825600E1EB45 /* HGPrettyCell.xib in Resources */,
+				FAEEC98C1FFF113800F8B384 /* HGCollectionGameCell.xib in Resources */,
 				FAFD95891FE1521D00F0BBD9 /* Assets.xcassets in Resources */,
 				FA860A121FF37D5700E1EB45 /* HGCollectionNormalCell.xib in Resources */,
 				FAD7AD5E1FFC86760010DFE1 /* HGRecommentCycleView.xib in Resources */,
@@ -508,6 +518,7 @@
 				FA7B35711FEB49B0007A946F /* HGPageTitleView.swift in Sources */,
 				FA3732391FF5285E00BB2ACC /* HGRecommentViewModel.swift in Sources */,
 				FA860A111FF37D5700E1EB45 /* HGCollectionNormalCell.swift in Sources */,
+				FAEEC98B1FFF113800F8B384 /* HGCollectionGameCell.swift in Sources */,
 				FA7B356A1FEB3B5C007A946F /* HGFollowController.swift in Sources */,
 				FA860A151FF4825600E1EB45 /* HGPrettyCell.swift in Sources */,
 				FAB5104D1FEC8E3C00E8CB83 /* UIColor+Extension.swift in Sources */,
@@ -516,6 +527,7 @@
 				FA37323F1FF5E82200BB2ACC /* HGAnchorModel.swift in Sources */,
 				FA37323D1FF5311700BB2ACC /* HGAnchorGroup.swift in Sources */,
 				FAD7AD5A1FFC7FCE0010DFE1 /* HGBaseCell.swift in Sources */,
+				FAEEC98E1FFF31EE00F8B384 /* HGGameViewController.swift in Sources */,
 				FA7B35561FEB3B23007A946F /* HGHomeController.swift in Sources */,
 				FAD7AD601FFCB4E20010DFE1 /* HGCycelModel.swift in Sources */,
 				FA860A0A1FF3274400E1EB45 /* HGRecommendController.swift in Sources */,
