@@ -12,9 +12,7 @@ class HGCollectionHeaderView: UICollectionReusableView {
 
     //MARK:- 设置属性
     @IBOutlet weak var iconImageView: UIImageView!
-    
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var moreLine: UIButton!
     //MARK:- 定义模型属性
     var group:HGAnchorGroup? {
@@ -25,6 +23,10 @@ class HGCollectionHeaderView: UICollectionReusableView {
             iconImageView.image = UIImage(named:group?.icon_name ?? "home_header_normal")
         }
     }
-    
-    
+}
+
+extension HGCollectionHeaderView {
+    class func collectionHeaderView() -> HGCollectionHeaderView {
+        return Bundle.main.loadNibNamed("HGCollectionHeaderView", owner: nil, options: nil)?.first as! HGCollectionHeaderView
+    }
 }
