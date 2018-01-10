@@ -82,6 +82,16 @@ extension HGGameViewController{
     fileprivate func loadData() {
         gameVM.loadAllGameData {
             self.collectionView.reloadData()
+            
+            var games = [HGBaseGameModel]()
+            for i in 0..<6 {
+                games.append(self.gameVM.gameModels[i])
+            }
+            
+            self.recommentView.groups = games
+            
+            /// 简单方法
+            /// self.recommentView.groups = Array(self.gameVM.gameModels[0..<10])
         }
     }
 }

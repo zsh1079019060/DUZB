@@ -104,10 +104,23 @@ extension HGRecommendController {
         
         /// 1.请求 推荐数据
         recommendVM.requestData {
-            // 展示推荐数据
+            // 1.展示推荐数据
             self.collectionView.reloadData()
-            // 将数据给game
-            self.recommentGameView.groups = self.recommendVM.ancherGroups
+            
+            /// 2 拿到数据
+            var groups = self.recommendVM.ancherGroups
+            
+            /// 2.1 不需要钱两组数据，移除
+            groups.remove(at: 0)
+            groups.remove(at: 0)
+            
+            /// 2.2 添加更多
+            let moreGroups = HGAnchorGroup()
+            moreGroups.tag_name = "更多"
+            groups.append(moreGroups)
+        
+            // 2.3 将数据给game
+            self.recommentGameView.groups = groups
             
         }
         /// 2.请求 轮播数据

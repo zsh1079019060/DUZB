@@ -14,17 +14,8 @@ class HGRecommentGameView: UIView {
     /// 控件属性
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var groups:[HGAnchorGroup]? {
+    var groups:[HGBaseGameModel]? {
         didSet{
-            /// 不需要钱两组数据，移除
-            groups?.remove(at: 0)
-            groups?.remove(at: 0)
-
-            /// 添加更多
-            let moreGroups = HGAnchorGroup()
-            moreGroups.tag_name = "更多"
-            groups?.append(moreGroups)
-            
             
             collectionView.reloadData()
         }

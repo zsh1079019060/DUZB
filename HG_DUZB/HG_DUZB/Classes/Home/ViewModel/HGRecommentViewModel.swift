@@ -124,7 +124,7 @@ extension HGRecommentViewModel {
             for group in self.ancherGroups {
                 /// 打印是否可以取值
                 for anchor in group.anchors {
-                    ///print("<><><><\(anchor.nickname)")
+                    print("<><><><\(anchor.nickname)")
                 }
             }
             /// 出组
