@@ -32,6 +32,7 @@ class HGHomeController: UIViewController {
         var childVcs = [UIViewController]()
         childVcs.append(HGRecommendController())
         childVcs.append(HGGameViewController())
+        childVcs.append(HGAmuseViewController())
         for _ in 0..<5 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor.init(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
