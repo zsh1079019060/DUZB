@@ -39,6 +39,8 @@
 		FAD7AD601FFCB4E20010DFE1 /* HGCycelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7AD5F1FFCB4E20010DFE1 /* HGCycelModel.swift */; };
 		FAD7AD631FFCD33E0010DFE1 /* HGCollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7AD611FFCD33E0010DFE1 /* HGCollectionCycleCell.swift */; };
 		FAD7AD641FFCD33E0010DFE1 /* HGCollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7AD621FFCD33E0010DFE1 /* HGCollectionCycleCell.xib */; };
+		FAE1738D2009E9A200165703 /* HGBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1738C2009E9A200165703 /* HGBaseViewModel.swift */; };
+		FAE1738F2009ECE700165703 /* HGBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1738E2009ECE700165703 /* HGBaseViewController.swift */; };
 		FAEEC9861FFF066000F8B384 /* HGRecommentGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEEC9851FFF066000F8B384 /* HGRecommentGameView.swift */; };
 		FAEEC9881FFF072800F8B384 /* HGRecommentGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEEC9871FFF072800F8B384 /* HGRecommentGameView.xib */; };
 		FAEEC98B1FFF113800F8B384 /* HGCollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEEC9891FFF113800F8B384 /* HGCollectionGameCell.swift */; };
@@ -87,6 +89,8 @@
 		FAD7AD5F1FFCB4E20010DFE1 /* HGCycelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGCycelModel.swift; sourceTree = "<group>"; };
 		FAD7AD611FFCD33E0010DFE1 /* HGCollectionCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGCollectionCycleCell.swift; sourceTree = "<group>"; };
 		FAD7AD621FFCD33E0010DFE1 /* HGCollectionCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGCollectionCycleCell.xib; sourceTree = "<group>"; };
+		FAE1738C2009E9A200165703 /* HGBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGBaseViewModel.swift; sourceTree = "<group>"; };
+		FAE1738E2009ECE700165703 /* HGBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGBaseViewController.swift; sourceTree = "<group>"; };
 		FAEEC9851FFF066000F8B384 /* HGRecommentGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRecommentGameView.swift; sourceTree = "<group>"; };
 		FAEEC9871FFF072800F8B384 /* HGRecommentGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGRecommentGameView.xib; sourceTree = "<group>"; };
 		FAEEC9891FFF113800F8B384 /* HGCollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGCollectionGameCell.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 			children = (
 				FA7B354E1FEB3A91007A946F /* HGNavigationController.swift */,
 				FA7B354F1FEB3A91007A946F /* HGTabBarController.swift */,
+				FAE1738E2009ECE700165703 /* HGBaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -354,11 +359,20 @@
 		FA7F98191FE948850055B157 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FAE1738B2009E96D00165703 /* ViewModel */,
 				FA7B354D1FEB3A91007A946F /* Controller */,
 				FA7B354C1FEB3A90007A946F /* Model */,
 				FA7B354B1FEB3A90007A946F /* View */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		FAE1738B2009E96D00165703 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAE1738C2009E9A200165703 /* HGBaseViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FAFD95751FE1521D00F0BBD9 = {
@@ -543,6 +557,7 @@
 				FA7B35501FEB3A91007A946F /* HGNavigationController.swift in Sources */,
 				FAEEC9901FFF3B7700F8B384 /* HGGameViewModel.swift in Sources */,
 				FA37323F1FF5E82200BB2ACC /* HGAnchorModel.swift in Sources */,
+				FAE1738D2009E9A200165703 /* HGBaseViewModel.swift in Sources */,
 				FA37323D1FF5311700BB2ACC /* HGAnchorGroup.swift in Sources */,
 				FAD7AD5A1FFC7FCE0010DFE1 /* HGBaseCell.swift in Sources */,
 				FAEEC98E1FFF31EE00F8B384 /* HGGameViewController.swift in Sources */,
@@ -556,6 +571,7 @@
 				FAD7AD5C1FFC86530010DFE1 /* HGRecommentCycleView.swift in Sources */,
 				FA37323B1FF52CE400BB2ACC /* NSDate+Extension.swift in Sources */,
 				FA860A0D1FF3777500E1EB45 /* HGCollectionHeaderView.swift in Sources */,
+				FAE1738F2009ECE700165703 /* HGBaseViewController.swift in Sources */,
 				FA7B35731FEB4B98007A946F /* Common.swift in Sources */,
 				FAEEC9861FFF066000F8B384 /* HGRecommentGameView.swift in Sources */,
 				FAEEC9941FFF3EC700F8B384 /* HGBaseGameModel.swift in Sources */,

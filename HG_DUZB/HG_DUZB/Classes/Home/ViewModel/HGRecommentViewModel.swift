@@ -8,9 +8,8 @@
 
 import UIKit
 
-class HGRecommentViewModel {
-    /// 0 1 2 ~ 12 懒加载
-    lazy var ancherGroups:[HGAnchorGroup] = [HGAnchorGroup]()
+class HGRecommentViewModel:HGBaseViewModel{
+
     /// 把 最热 和 颜值 添加到最前面 所以  把数据全部请求完，在进行添加 
     /// 最热
     fileprivate lazy var prettyGroups:HGAnchorGroup = HGAnchorGroup()
@@ -104,33 +103,11 @@ extension HGRecommentViewModel {
         
         /// 2 - 12的数据
         enterGroup.enter()
-        HGNetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: param) { (result) in
-            // print("~~~~~~~~~\(result)")
-            /// 将result 转换成 字典类型
-            guard let resuteDict = result as? [String:AnyObject] else { return }
-            
-            /// 将字典类型 转换成 数组
-            guard let resultArr = resuteDict["data"] as? [[String:AnyObject]] else { return }
-            
-            /// 遍历数组 ，将数组中的字典转模型
-            for dict in resultArr {
-                
-                let group = HGAnchorGroup.init(dict: dict)
-                
-                self.ancherGroups.append(group)
-                
-            }
-            
-            for group in self.ancherGroups {
-                /// 打印是否可以取值
-                for anchor in group.anchors {
-                    print("<><><><\(anchor.nickname)")
-                }
-            }
+        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate",pararmters: param as [String : AnyObject]) {
             /// 出组
             enterGroup.leave()
-            
         }
+
         /// 主线程监听，只有当队列组中没有任务，才会执行闭包。如果多次调用该方法，每次都会去检查队列组中是否有任务，如果没有任务才执行
         enterGroup.notify(queue: DispatchQueue.main) {
             
