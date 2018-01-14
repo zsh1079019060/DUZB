@@ -31,7 +31,7 @@
                     </connections>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="J0r-tI-bFQ">
-                    <rect key="frame" x="326" y="120" width="39" height="37"/>
+                    <rect key="frame" x="326" y="125" width="39" height="37"/>
                     <color key="pageIndicatorTintColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="currentPageIndicatorTintColor" red="1" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </pageControl>
@@ -40,7 +40,7 @@
             <constraints>
                 <constraint firstItem="lvz-XO-OmK" firstAttribute="trailing" secondItem="CNZ-3F-vRw" secondAttribute="trailing" id="8xz-fg-mh5"/>
                 <constraint firstItem="CNZ-3F-vRw" firstAttribute="leading" secondItem="lvz-XO-OmK" secondAttribute="leading" id="FD7-I4-g0D"/>
-                <constraint firstItem="J0r-tI-bFQ" firstAttribute="bottom" secondItem="lvz-XO-OmK" secondAttribute="bottom" id="I8y-e2-yRU"/>
+                <constraint firstItem="J0r-tI-bFQ" firstAttribute="bottom" secondItem="lvz-XO-OmK" secondAttribute="bottom" constant="5" id="I8y-e2-yRU"/>
                 <constraint firstItem="lvz-XO-OmK" firstAttribute="trailing" secondItem="J0r-tI-bFQ" secondAttribute="trailing" constant="10" id="daR-wj-WY2"/>
                 <constraint firstItem="CNZ-3F-vRw" firstAttribute="top" secondItem="lvz-XO-OmK" secondAttribute="top" id="ifS-GD-Cwu"/>
                 <constraint firstItem="lvz-XO-OmK" firstAttribute="bottom" secondItem="CNZ-3F-vRw" secondAttribute="bottom" id="yfq-ee-JWA"/>
