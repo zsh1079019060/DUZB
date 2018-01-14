@@ -45,6 +45,7 @@
 		FAE17393200AFA7800165703 /* HGAmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE17392200AFA7800165703 /* HGAmuseMenuView.xib */; };
 		FAE17396200B02BE00165703 /* HGAmuseMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17394200B02BE00165703 /* HGAmuseMenuViewCell.swift */; };
 		FAE17397200B02BE00165703 /* HGAmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE17395200B02BE00165703 /* HGAmuseMenuViewCell.xib */; };
+		FAE17399200B41BB00165703 /* HGFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17398200B41BB00165703 /* HGFunnyViewController.swift */; };
 		FAEEC9861FFF066000F8B384 /* HGRecommentGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEEC9851FFF066000F8B384 /* HGRecommentGameView.swift */; };
 		FAEEC9881FFF072800F8B384 /* HGRecommentGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEEC9871FFF072800F8B384 /* HGRecommentGameView.xib */; };
 		FAEEC98B1FFF113800F8B384 /* HGCollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEEC9891FFF113800F8B384 /* HGCollectionGameCell.swift */; };
@@ -99,6 +100,7 @@
 		FAE17392200AFA7800165703 /* HGAmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGAmuseMenuView.xib; sourceTree = "<group>"; };
 		FAE17394200B02BE00165703 /* HGAmuseMenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGAmuseMenuViewCell.swift; sourceTree = "<group>"; };
 		FAE17395200B02BE00165703 /* HGAmuseMenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGAmuseMenuViewCell.xib; sourceTree = "<group>"; };
+		FAE17398200B41BB00165703 /* HGFunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGFunnyViewController.swift; sourceTree = "<group>"; };
 		FAEEC9851FFF066000F8B384 /* HGRecommentGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRecommentGameView.swift; sourceTree = "<group>"; };
 		FAEEC9871FFF072800F8B384 /* HGRecommentGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGRecommentGameView.xib; sourceTree = "<group>"; };
 		FAEEC9891FFF113800F8B384 /* HGCollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGCollectionGameCell.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				FA860A091FF3274400E1EB45 /* HGRecommendController.swift */,
 				FAEEC98D1FFF31EE00F8B384 /* HGGameViewController.swift */,
 				FAB9C2EC20085966000BE89A /* HGAmuseViewController.swift */,
+				FAE17398200B41BB00165703 /* HGFunnyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 				FAB5104D1FEC8E3C00E8CB83 /* UIColor+Extension.swift in Sources */,
 				FA7B356C1FEB3BF5007A946F /* HGProfileController.swift in Sources */,
 				FA7B35501FEB3A91007A946F /* HGNavigationController.swift in Sources */,
+				FAE17399200B41BB00165703 /* HGFunnyViewController.swift in Sources */,
 				FAEEC9901FFF3B7700F8B384 /* HGGameViewModel.swift in Sources */,
 				FA37323F1FF5E82200BB2ACC /* HGAnchorModel.swift in Sources */,
 				FAE17391200AFA5300165703 /* HGAmuseMenuView.swift in Sources */,

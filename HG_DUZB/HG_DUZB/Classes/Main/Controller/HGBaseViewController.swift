@@ -77,16 +77,24 @@ class HGBaseViewController: UIViewController {
 extension HGBaseViewController:UICollectionViewDelegate,UICollectionViewDataSource{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        if baseVM == nil {
+            return 1
+        }
         return baseVM.ancherGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if baseVM == nil {
+            return 10
+        }
         return baseVM.ancherGroups[section].anchors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCell, for: indexPath) as! HGCollectionNormalCell
-        
+        if baseVM == nil {
+            return cell
+        }
         cell.anchor = baseVM.ancherGroups[indexPath.section].anchors[indexPath.item]
         return cell
     }
@@ -94,6 +102,9 @@ extension HGBaseViewController:UICollectionViewDelegate,UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         /// 取出headerView
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderView, for: indexPath) as! HGCollectionHeaderView
+        if baseVM == nil {
+            return headerView
+        }
         /// 给headerView设置 数据
         headerView.group = baseVM.ancherGroups[indexPath.section]
         

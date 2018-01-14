@@ -33,11 +33,7 @@ class HGHomeController: UIViewController {
         childVcs.append(HGRecommendController())
         childVcs.append(HGGameViewController())
         childVcs.append(HGAmuseViewController())
-        for _ in 0..<5 {
-            let vc = UIViewController()
-            vc.view.backgroundColor = UIColor.init(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
-            childVcs.append(vc)
-        }
+        childVcs.append(HGFunnyViewController())
         
         let pageContentView = HGPageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
         pageContentView.delegate = self
