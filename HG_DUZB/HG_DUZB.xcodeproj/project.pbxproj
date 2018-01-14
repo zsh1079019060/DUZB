@@ -43,6 +43,8 @@
 		FAE1738F2009ECE700165703 /* HGBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1738E2009ECE700165703 /* HGBaseViewController.swift */; };
 		FAE17391200AFA5300165703 /* HGAmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17390200AFA5300165703 /* HGAmuseMenuView.swift */; };
 		FAE17393200AFA7800165703 /* HGAmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE17392200AFA7800165703 /* HGAmuseMenuView.xib */; };
+		FAE17396200B02BE00165703 /* HGAmuseMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE17394200B02BE00165703 /* HGAmuseMenuViewCell.swift */; };
+		FAE17397200B02BE00165703 /* HGAmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE17395200B02BE00165703 /* HGAmuseMenuViewCell.xib */; };
 		FAEEC9861FFF066000F8B384 /* HGRecommentGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEEC9851FFF066000F8B384 /* HGRecommentGameView.swift */; };
 		FAEEC9881FFF072800F8B384 /* HGRecommentGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEEC9871FFF072800F8B384 /* HGRecommentGameView.xib */; };
 		FAEEC98B1FFF113800F8B384 /* HGCollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEEC9891FFF113800F8B384 /* HGCollectionGameCell.swift */; };
@@ -95,6 +97,8 @@
 		FAE1738E2009ECE700165703 /* HGBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGBaseViewController.swift; sourceTree = "<group>"; };
 		FAE17390200AFA5300165703 /* HGAmuseMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGAmuseMenuView.swift; sourceTree = "<group>"; };
 		FAE17392200AFA7800165703 /* HGAmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGAmuseMenuView.xib; sourceTree = "<group>"; };
+		FAE17394200B02BE00165703 /* HGAmuseMenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGAmuseMenuViewCell.swift; sourceTree = "<group>"; };
+		FAE17395200B02BE00165703 /* HGAmuseMenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGAmuseMenuViewCell.xib; sourceTree = "<group>"; };
 		FAEEC9851FFF066000F8B384 /* HGRecommentGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRecommentGameView.swift; sourceTree = "<group>"; };
 		FAEEC9871FFF072800F8B384 /* HGRecommentGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HGRecommentGameView.xib; sourceTree = "<group>"; };
 		FAEEC9891FFF113800F8B384 /* HGCollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGCollectionGameCell.swift; sourceTree = "<group>"; };
@@ -209,6 +213,8 @@
 				FAEEC98A1FFF113800F8B384 /* HGCollectionGameCell.xib */,
 				FAE17390200AFA5300165703 /* HGAmuseMenuView.swift */,
 				FAE17392200AFA7800165703 /* HGAmuseMenuView.xib */,
+				FAE17394200B02BE00165703 /* HGAmuseMenuViewCell.swift */,
+				FAE17395200B02BE00165703 /* HGAmuseMenuViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -481,6 +487,7 @@
 				FAEEC98C1FFF113800F8B384 /* HGCollectionGameCell.xib in Resources */,
 				FAFD95891FE1521D00F0BBD9 /* Assets.xcassets in Resources */,
 				FA860A121FF37D5700E1EB45 /* HGCollectionNormalCell.xib in Resources */,
+				FAE17397200B02BE00165703 /* HGAmuseMenuViewCell.xib in Resources */,
 				FAD7AD5E1FFC86760010DFE1 /* HGRecommentCycleView.xib in Resources */,
 				FAEEC9881FFF072800F8B384 /* HGRecommentGameView.xib in Resources */,
 				FAD7AD641FFCD33E0010DFE1 /* HGCollectionCycleCell.xib in Resources */,
@@ -568,6 +575,7 @@
 				FAE1738D2009E9A200165703 /* HGBaseViewModel.swift in Sources */,
 				FA37323D1FF5311700BB2ACC /* HGAnchorGroup.swift in Sources */,
 				FAD7AD5A1FFC7FCE0010DFE1 /* HGBaseCell.swift in Sources */,
+				FAE17396200B02BE00165703 /* HGAmuseMenuViewCell.swift in Sources */,
 				FAEEC98E1FFF31EE00F8B384 /* HGGameViewController.swift in Sources */,
 				FA7B35561FEB3B23007A946F /* HGHomeController.swift in Sources */,
 				FAD7AD601FFCB4E20010DFE1 /* HGCycelModel.swift in Sources */,

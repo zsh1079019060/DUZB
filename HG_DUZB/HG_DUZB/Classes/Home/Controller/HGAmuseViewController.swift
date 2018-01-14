@@ -15,7 +15,6 @@ class HGAmuseViewController: HGBaseViewController {
     fileprivate lazy var menuView:HGAmuseMenuView = {
         let menuView = HGAmuseMenuView.amuseMenuView()
         menuView.frame = CGRect(x: 0, y: -kMenuViewH, width: SCREEN_WIDTH, height: kMenuViewH)
-        menuView.backgroundColor = UIColor.randomColor()
         return menuView
     }()
 
@@ -24,6 +23,9 @@ class HGAmuseViewController: HGBaseViewController {
         baseVM = amuseVM
         amuseVM.loadAmuseData {
             self.collectionView.reloadData()
+            var tempGroups = self.amuseVM.ancherGroups
+            tempGroups.remove(at: 0)
+            self.menuView.groups = tempGroups
         }
     }
     override func setupUI() {
