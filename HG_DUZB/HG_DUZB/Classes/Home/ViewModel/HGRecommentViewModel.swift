@@ -103,7 +103,7 @@ extension HGRecommentViewModel {
         
         /// 2 - 12的数据
         enterGroup.enter()
-        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate",pararmters: param as [String : AnyObject]) {
+        loadAnchorData(isGroup: true, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate",pararmters: param as [String : AnyObject]) {
             /// 出组
             enterGroup.leave()
         }

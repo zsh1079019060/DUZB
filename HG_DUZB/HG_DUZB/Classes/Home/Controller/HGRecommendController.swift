@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HGRecommendController: HGBaseViewController {
+class HGRecommendController: HGBaseAnchorViewController {
     
     private lazy var recommendVM:HGRecommentViewModel = HGRecommentViewModel()
     
@@ -70,6 +70,8 @@ class HGRecommendController: HGBaseViewController {
             // 2.3 将数据给game
             self.recommentGameView.groups = groups
             
+            /// 数据请求完成
+            self.loadDataFinished()
         }
         /// 2.请求 轮播数据
         recommendVM.requeseCycleData {

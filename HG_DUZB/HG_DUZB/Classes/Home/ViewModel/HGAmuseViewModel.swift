@@ -21,7 +21,7 @@ extension HGAmuseViewModel {
          "http://capi.douyucdn.cn/api/v1/getHotRoom/2"
          没有参数
          */
-        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotRoom/2", finishedCallBack: finishedCallBack)
+        loadAnchorData(isGroup: true, URLString: "http://capi.douyucdn.cn/api/v1/getHotRoom/2", finishedCallBack: finishedCallBack)
 
     }
 }

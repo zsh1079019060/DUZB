@@ -8,7 +8,7 @@
 
 import UIKit
 private let kMenuViewH : CGFloat = 200
-class HGAmuseViewController: HGBaseViewController {
+class HGAmuseViewController: HGBaseAnchorViewController {
     
     /// MARK: 懒加载
     fileprivate lazy var amuseVM:HGAmuseViewModel = HGAmuseViewModel()
@@ -26,6 +26,8 @@ class HGAmuseViewController: HGBaseViewController {
             var tempGroups = self.amuseVM.ancherGroups
             tempGroups.remove(at: 0)
             self.menuView.groups = tempGroups
+            /// 数据请求完成
+            self.loadDataFinished()
         }
     }
     override func setupUI() {

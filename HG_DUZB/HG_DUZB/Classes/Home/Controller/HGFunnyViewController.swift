@@ -9,7 +9,10 @@
 import UIKit
 private let kTopMargin : CGFloat = 8
 
-class HGFunnyViewController: HGBaseViewController {
+class HGFunnyViewController: HGBaseAnchorViewController {
+    
+    // MARK: 懒加载
+    fileprivate lazy var funnyVM:HGFunnyViewModel = HGFunnyViewModel()
 
     override func setupUI() {
         super.setupUI()
@@ -19,9 +22,16 @@ class HGFunnyViewController: HGBaseViewController {
         collectionView.contentInset = UIEdgeInsets(top: kTopMargin, left: 0, bottom: 0, right: 0)
         
     }
-}
-
-// MARK: - <#Description#>
-extension HGFunnyViewController{
-    
+    override func loadData() {
+        /// 给父类中的viewModel进行赋值
+        baseVM = funnyVM
+        
+        
+        funnyVM.loadFunnyData {
+            /// 1.刷新表格
+            self.collectionView.reloadData()
+            /// 2.数据请求完成
+            self.loadDataFinished()
+        }
+    }
 }

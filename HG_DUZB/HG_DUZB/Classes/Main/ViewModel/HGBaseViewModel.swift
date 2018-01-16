@@ -15,7 +15,7 @@ class HGBaseViewModel {
 
 extension HGBaseViewModel{
     
-    func loadAnchorData(URLString:String,pararmters:[String:AnyObject]? = nil,finishedCallBack:@escaping ()->()) {
+    func loadAnchorData(isGroup:Bool,URLString:String,pararmters:[String:AnyObject]? = nil,finishedCallBack:@escaping ()->()) {
         
         HGNetworkTools.requestData(type: .GET, URLString: URLString,parameters: pararmters as? [String : String]) { (result) in
             
@@ -23,10 +23,25 @@ extension HGBaseViewModel{
             guard let resultDist = result as? [String:AnyObject] else { return }
             guard let dictArray = resultDist["data"] as? [[String:AnyObject]] else { return }
             
-            /// 2.循环遍历字典数组
-            for dict in dictArray {
-                self.ancherGroups.append(HGAnchorGroup(dict: dict))
+            if isGroup {
+                /// 2.循环遍历字典数组
+                for dict in dictArray {
+                    self.ancherGroups.append(HGAnchorGroup(dict: dict))
+                }
+            }else{
+                /// 创建组
+                let group = HGAnchorGroup()
+                
+                /// 遍历dataArray的所有字典
+                for dict in dictArray {
+                    group.anchors.append(HGAnchorModel(dict: dict))
+                    /// 添加group到self.ancherGroups
+                    self.ancherGroups.append(group)
+                }
+                
             }
+                
+            
             
             /// 3.完成回调
             finishedCallBack()

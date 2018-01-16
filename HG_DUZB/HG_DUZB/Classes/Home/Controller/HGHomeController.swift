@@ -15,7 +15,7 @@ class HGHomeController: UIViewController {
     /// MARK: - 懒加载属性
     private lazy var pageTitleView:HGPageTitleView = { [weak self] in
         let titleFrame = CGRect.init(x: 0, y: kStatusBarH+kNavigationBarH, width: SCREEN_WIDTH, height: kTitleViewH)
-        let titles = ["推荐","游戏","娱乐","趣玩","视频"]
+        let titles = ["推荐","游戏","娱乐","趣玩"]
         let titleView = HGPageTitleView(frame: titleFrame, titles: titles)
         titleView.delegate = self
         return titleView

@@ -12,7 +12,7 @@ private let hgItemW:CGFloat = (SCREEN_WIDTH - 2 * kEdgeMargin) / 3
 private let kItemH:CGFloat = hgItemW*6/5
 private let gameCellId = "gameCellId"
 private let kHeaderID = "kHeaderID"
-class HGGameViewController: UIViewController {
+class HGGameViewController: HGBaseViewController {
     
     fileprivate lazy var gameVM:HGGameViewModel = HGGameViewModel()
     /// MARK: 懒加载属性
@@ -56,12 +56,10 @@ class HGGameViewController: UIViewController {
         setupUI()
         loadData()
     }
-
-}
-// MARK: - 设置UI界面
-extension HGGameViewController{
     /// 设置UI界面
-    fileprivate func setupUI() {
+    override func setupUI() {
+        /// 0.给collectionView进行赋值
+        content = collectionView
         /// 1.添加UICollectinView
         view.addSubview(collectionView)
         /// 2.添加顶部的HeaderView
@@ -69,11 +67,12 @@ extension HGGameViewController{
         
         collectionView.addSubview(recommentView)
         
-        /// 3.设置CollectionView 的内边距 
+        /// 3.设置CollectionView 的内边距
         collectionView.contentInset = UIEdgeInsetsMake(kHeaderViewH+kGameViewH, 0, 0, 0)
-        
+        super.setupUI()
     }
 }
+
 // MARK: - 设置数据
 extension HGGameViewController{
     /// 设置数据
@@ -90,12 +89,14 @@ extension HGGameViewController{
             
             /// 简单方法
             /// self.recommentView.groups = Array(self.gameVM.gameModels[0..<10])
+            /// 数据请求完成 
+            self.loadDataFinished()
         }
     }
 }
 
 // MARK: - UICollectionViewDataSource实现数据源
-extension HGGameViewController:UICollectionViewDataSource{
+extension HGGameViewController:UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return gameVM.gameModels.count
