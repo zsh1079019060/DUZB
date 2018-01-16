@@ -119,16 +119,16 @@ extension HGBaseAnchorViewController:UICollectionViewDelegate,UICollectionViewDa
     }
     
     private func presntShowRoomVC(){
-        /// 创建ShowRoomVC
+        /// 1.创建ShowRoomVC
         let showRoomVC = HGRoomShowViewController()
-        /// 以Model方式弹出
+        /// 2.以Model方式弹出
         present(showRoomVC, animated: true, completion: nil)
         
     }
     private func pushNormalRoomVC(){
-        /// 创建NormalRoomVC
+        /// 1.创建NormalRoomVC
         let normalRoomVc = HGRoomNormalViewController()
-        /// 
+        /// 2.以push方式弹出
         navigationController?.pushViewController(normalRoomVc, animated: true)
         
     }

@@ -16,20 +16,16 @@ class HGNavigationController: UINavigationController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+
+        // 如果不是栈低的控制器才需要隐藏，跟控制器不需要处理
+        if childViewControllers.count > 0 {
+            
+            // 隐藏底部的TabBar
+            viewController.hidesBottomBarWhenPushed = true
+        
+        }
+        super.pushViewController(viewController, animated: animated)
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
