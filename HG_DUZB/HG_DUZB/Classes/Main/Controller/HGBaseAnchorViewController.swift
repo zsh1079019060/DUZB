@@ -107,4 +107,29 @@ extension HGBaseAnchorViewController:UICollectionViewDelegate,UICollectionViewDa
         
         return headerView
     }
+
+    // MARK: 点击事件
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        /// 取出对应的主播信息
+        let anchor = baseVM.ancherGroups[indexPath.section].anchors[indexPath.item]
+        
+        /// 判断是否是秀场还是普通房间
+        anchor.isVertical == 0 ?  pushNormalRoomVC() : presntShowRoomVC()
+        
+    }
+    
+    private func presntShowRoomVC(){
+        /// 创建ShowRoomVC
+        let showRoomVC = HGRoomShowViewController()
+        /// 以Model方式弹出
+        present(showRoomVC, animated: true, completion: nil)
+        
+    }
+    private func pushNormalRoomVC(){
+        /// 创建NormalRoomVC
+        let normalRoomVc = HGRoomNormalViewController()
+        /// 
+        navigationController?.pushViewController(normalRoomVc, animated: true)
+        
+    }
 }

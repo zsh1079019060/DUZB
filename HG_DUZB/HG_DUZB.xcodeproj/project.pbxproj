@@ -10,6 +10,8 @@
 		C32121A5FC58F2AE2C790EB1 /* Pods_HG_DUZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F02EF4E83A5B925F264957F /* Pods_HG_DUZB.framework */; };
 		FA01E051200D956A00F7C17C /* HGFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01E050200D956A00F7C17C /* HGFunnyViewModel.swift */; };
 		FA01E053200DD69800F7C17C /* HGBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01E052200DD69800F7C17C /* HGBaseViewController.swift */; };
+		FA01E059200DE3FB00F7C17C /* HGRoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01E058200DE3FB00F7C17C /* HGRoomShowViewController.swift */; };
+		FA01E05B200DE42200F7C17C /* HGRoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01E05A200DE42200F7C17C /* HGRoomNormalViewController.swift */; };
 		FA3732391FF5285E00BB2ACC /* HGRecommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3732381FF5285E00BB2ACC /* HGRecommentViewModel.swift */; };
 		FA37323B1FF52CE400BB2ACC /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37323A1FF52CE400BB2ACC /* NSDate+Extension.swift */; };
 		FA37323D1FF5311700BB2ACC /* HGAnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37323C1FF5311700BB2ACC /* HGAnchorGroup.swift */; };
@@ -67,6 +69,8 @@
 		78944910BAC0FF03F95ED7D8 /* Pods-HG_DUZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HG_DUZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-HG_DUZB/Pods-HG_DUZB.release.xcconfig"; sourceTree = "<group>"; };
 		FA01E050200D956A00F7C17C /* HGFunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGFunnyViewModel.swift; sourceTree = "<group>"; };
 		FA01E052200DD69800F7C17C /* HGBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGBaseViewController.swift; sourceTree = "<group>"; };
+		FA01E058200DE3FB00F7C17C /* HGRoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRoomShowViewController.swift; sourceTree = "<group>"; };
+		FA01E05A200DE42200F7C17C /* HGRoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRoomNormalViewController.swift; sourceTree = "<group>"; };
 		FA3732381FF5285E00BB2ACC /* HGRecommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGRecommentViewModel.swift; sourceTree = "<group>"; };
 		FA37323A1FF52CE400BB2ACC /* NSDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		FA37323C1FF5311700BB2ACC /* HGAnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGAnchorGroup.swift; sourceTree = "<group>"; };
@@ -147,6 +151,39 @@
 				5F02EF4E83A5B925F264957F /* Pods_HG_DUZB.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA01E054200DE3D200F7C17C /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				FA01E055200DE3D200F7C17C /* Controller */,
+				FA01E056200DE3D200F7C17C /* Model */,
+				FA01E057200DE3D200F7C17C /* View */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		FA01E055200DE3D200F7C17C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA01E058200DE3FB00F7C17C /* HGRoomShowViewController.swift */,
+				FA01E05A200DE42200F7C17C /* HGRoomNormalViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA01E056200DE3D200F7C17C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA01E057200DE3D200F7C17C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FA3732371FF5282D00BB2ACC /* ViewModel */ = {
@@ -317,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				FA7F98191FE948850055B157 /* Main */,
+				FA01E054200DE3D200F7C17C /* Room */,
 				FA7F98141FE948850055B157 /* Home */,
 				FA7F98181FE948850055B157 /* Live */,
 				FA7F98161FE948850055B157 /* Follow */,
@@ -574,6 +612,7 @@
 				FA7B356A1FEB3B5C007A946F /* HGFollowController.swift in Sources */,
 				FA860A151FF4825600E1EB45 /* HGPrettyCell.swift in Sources */,
 				FAB9C2EB200855B7000BE89A /* HGAmuseViewModel.swift in Sources */,
+				FA01E059200DE3FB00F7C17C /* HGRoomShowViewController.swift in Sources */,
 				FAB9C2ED20085966000BE89A /* HGAmuseViewController.swift in Sources */,
 				FAB5104D1FEC8E3C00E8CB83 /* UIColor+Extension.swift in Sources */,
 				FA7B356C1FEB3BF5007A946F /* HGProfileController.swift in Sources */,
@@ -597,6 +636,7 @@
 				FA7B355B1FEB3B35007A946F /* HGLiveController.swift in Sources */,
 				FAD7AD5C1FFC86530010DFE1 /* HGRecommentCycleView.swift in Sources */,
 				FA37323B1FF52CE400BB2ACC /* NSDate+Extension.swift in Sources */,
+				FA01E05B200DE42200F7C17C /* HGRoomNormalViewController.swift in Sources */,
 				FA860A0D1FF3777500E1EB45 /* HGCollectionHeaderView.swift in Sources */,
 				FAE1738F2009ECE700165703 /* HGBaseAnchorViewController.swift in Sources */,
 				FA7B35731FEB4B98007A946F /* Common.swift in Sources */,
